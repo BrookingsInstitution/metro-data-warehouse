@@ -7,19 +7,28 @@ The goal of metro.data is to streamline data analysis workflow at Brookings Metr
 
 ## Installation
 
-You can install the released version of metro.data from [CRAN](https://CRAN.R-project.org) with:
+You can install the version in development of metro.data from Github with: 
 
 ``` r
-## not yet released
-install.packages("metro.data")
+devtools::install_github("BrookingsInstitution/metro.data")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
+Get relation file of county, cbsa, and state
 ``` r
-library(metro.data)
-## basic example code
+county_cbsa_st
 ```
 
+
+Get cbsa code, name, populaiton and employment for top 100 metros in the US:
+
+``` r
+metro.data::get_metro100()
+```
+
+Get cbsa size by population:
+
+``` r
+metro.data::get_metrosize()
+```
