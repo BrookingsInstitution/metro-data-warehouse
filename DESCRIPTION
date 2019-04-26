@@ -16,6 +16,7 @@ Imports:
     censusapi,
     readxl,
     httr,
-    magrittr
+    magrittr,
+    stringr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
