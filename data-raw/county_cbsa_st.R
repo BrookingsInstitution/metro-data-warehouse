@@ -74,6 +74,7 @@ county_cbsa_st <- update.master()
 # generate codebook
 dataMaid::makeDataReport(county_cbsa_st,
                          mode = "summarize",
+                         render = F,
                          replace = T, listChecks = F, codebook = T)
 
 # save output
