@@ -4,6 +4,8 @@
 # Date: Fri Apr 26 11:23:04 2019
 # --------------
 library("censusapi")
+library("dataMaid")
+
 source("data-raw/fetch_new_data.R")
 source("data-raw/classify_geo.R")
 
@@ -32,7 +34,7 @@ update.master <- function(){
 
     # rename and keep only the selected columns
     select(code.county = GEOID,
-           name.county = GEO_TTL,
+           name.county = NAME,
            population.county = B01003_001E,
            employment.county = EMP,
            pct.urban.county,
@@ -55,9 +57,12 @@ update.master <- function(){
     ungroup()%>%
 
     # def other classifications
-    def_metro100%>%
     def_metrosize%>%
-    def_countytype
+    def_metro100%>%
+    def_countytype%>%
+
+    # order columns
+    select(contains("county"),contains("state"),contains("cbsa"))
 
   # save output
    return(county_cbsa_st)
@@ -68,7 +73,9 @@ update.master <- function(){
 county_cbsa_st <- update.master()
 # generate codebook
 dataMaid::makeDataReport(county_cbsa_st,
-                         # mode = "summarize",
+                         mode = "summarize",
                          replace = T, listChecks = F, codebook = T)
+
 # save output
-usethis::use_data(county_cbsa_st)
+usethis::use_data(county_cbsa_st, overwrite = T)
+
