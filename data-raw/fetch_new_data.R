@@ -16,7 +16,6 @@ get_county.pop <- function(acs_year){
     mutate(GEOID = paste0(str_pad(state,2,"left","0"),str_pad(county,3,"left","0")))
 }
 
-
 # get latest county employment estimates from county business pattern using censusapi::
 get_county.emp <- function(cbp_year){
   getCensus(name = "cbp",
@@ -43,7 +42,11 @@ get_msa2county <- function(url){
 
 get_county_urban_rural <- function(url){
   readxl_online(url)%>%
-    mutate(GEOID = paste0(STATE, COUNTY))%>%
+    mutate(COUNTY = case_when(
+      STATENAME == "South Dakota" & COUNTYNAME == "Shannon" ~ "102",
+      STATENAME == "Alaska" & COUNTYNAME == "Wade Hampton" ~ "158",
+      TRUE ~ COUNTY),
+      GEOID = paste0(STATE, COUNTY))%>%
     rename(pct.urban.county = POPPCT_URBAN)
 }
 
