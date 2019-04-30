@@ -1,13 +1,3 @@
-def_metrosize <- function(df){
-  df %>%
-    mutate(size.cbsa = case_when(
-      population.cbsa > 1000000 ~ "Large metro",
-      population.cbsa <= 1000000 & population.cbsa >= 250000 ~ "Medium metro",
-      population.cbsa < 250000 ~ "Small metro",
-      TRUE ~ "NA"))
-}
-
-
 
 def_metrotype <- function(df){
   df %>%
@@ -15,10 +5,20 @@ def_metrotype <- function(df){
     mutate(type.cbsa = case_when(
       `Metropolitan/Micropolitan Statistical Area`=="Metropolitan Statistical Area" ~ "metro",
       `Metropolitan/Micropolitan Statistical Area`=="Micropolitan Statistical Area" ~ "micro",
-      is.na(`Metropolitan/Micropolitan Statistical Area`) ~ "nonmetro",
-      TRUE ~ "NA"
-    ))
-  }
+      is.na(`Metropolitan/Micropolitan Statistical Area`) ~ "nonmetro"))
+}
+
+
+def_metrosize <- function(df){
+  df %>%
+    mutate(size.cbsa = ifelse(type.cbsa=="metro",
+                              case_when(
+                                population.cbsa > 1000000 ~ "Large metro",
+                                population.cbsa <= 1000000 & population.cbsa >= 250000 ~ "Medium metro",
+                                population.cbsa < 250000 ~ "Small metro"),
+                              type.cbsa))
+}
+
 
 
 def_metro100 <- function(df){
