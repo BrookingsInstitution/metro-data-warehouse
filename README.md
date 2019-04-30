@@ -18,7 +18,7 @@ devtools::install_github("BrookingsInstitution/metro.data")
 Get relation file of county, cbsa, and state
 ``` r
 head(county_cbsa_st)
-<<<<<<< HEAD
+
 
 # A tibble: 6 x 16
   code.county name.county population.coun~ employment.coun~ pct.urban.county type.county code.state name.state population.state
@@ -33,3 +33,11 @@ head(county_cbsa_st)
 #   employment.cbsa <dbl>, size.cbsa <chr>
 
 ```
+
+Get a list of cbsa codes of top 100 metros
+
+``` r
+get_code_cbsa100()
+
+```
+
