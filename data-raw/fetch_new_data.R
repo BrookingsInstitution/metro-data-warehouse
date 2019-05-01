@@ -51,13 +51,15 @@ get_county_urban_rural <- function(url){
 }
 
 get_naics <- function(url){
-  tmp <- readxl_online(url,skip=2)%>%
+  tmp <- readxl_online(url)%>%
     # remove columns contain only nas
-    select_if(~sum(!is.na(.)) > 0)
+    select_if(~sum(!is.na(.)) > 0)%>%
+    select(-1)
 
   names(tmp) <- c("code.naics","name.naics")
   return(tmp)
 }
+
 
 get_naics_17_12<- function(url){
   tmp <- readxl_online(url, skip = 2,col_type = 'text')%>%
