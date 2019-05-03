@@ -3,11 +3,11 @@
 # Author: Sifan Liu
 # Date: Fri Apr 26 11:23:04 2019
 # --------------
-library("censusapi")
-library("dataMaid")
-
-source("data-raw/fetch_new_data.R")
-source("data-raw/classify_geo.R")
+library(censusapi)
+library(dataMaid)
+library(dplyr)
+library(stringr)
+source("R/readxl_online.R")
 
 # update delinations, population and employment from census ================
 # Require api key from census, sign up here: https://api.census.gov/data/key_signup.html
@@ -19,6 +19,104 @@ cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/re
 urban_url <- "https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls"
 cbp_year <- 2016
 acs_year <- 2017
+
+# functions to fetch data ------------------------------
+
+# get latest county population estimates from acs-5 year data using censusapi::
+get_county.pop <- function(acs_year){
+  getCensus(name = "acs/acs5",
+            vintage = acs_year,
+            vars = c("NAME","B01003_001E"),
+            region = "county:*",
+            key = key)%>%
+    # take out PR
+    filter(state != "72")%>%
+    mutate(GEOID = paste0(str_pad(state,2,"left","0"),str_pad(county,3,"left","0")))
+}
+
+# get latest county employment estimates from county business pattern using censusapi::
+get_county.emp <- function(cbp_year){
+  getCensus(name = "cbp",
+            vintage = cbp_year,
+            vars = c("EMP", "GEO_TTL"),
+            region = "county:*",
+            key = key)%>%
+    mutate(EMP = as.numeric(EMP),
+           # fix two county names changes
+           county = case_when(
+             GEO_TTL == "Shannon County, South Dakota" ~ "102",
+             GEO_TTL == "Wade Hampton Census Area, Alaska" ~ "158",
+             TRUE ~ county
+           ),
+           GEOID = paste0(str_pad(state,2,"left","0"),str_pad(county,3,"left","0")))
+}
+
+# download and read xls file from: https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
+get_msa2county <- function(url){
+  readxl_online(url,skip=2)%>%
+    mutate(GEOID = paste0(str_pad(`FIPS State Code`,2,"left","0"),
+                          str_pad(`FIPS County Code`,3,"left","0")))
+}
+
+get_county_urban_rural <- function(url){
+  readxl_online(url)%>%
+    mutate(COUNTY = case_when(
+      STATENAME == "South Dakota" & COUNTYNAME == "Shannon" ~ "102",
+      STATENAME == "Alaska" & COUNTYNAME == "Wade Hampton" ~ "158",
+      TRUE ~ COUNTY),
+      GEOID = paste0(STATE, COUNTY))%>%
+    rename(pct.urban.county = POPPCT_URBAN)
+}
+
+
+# functions to classify types ---------------------------------------
+def_metrotype <- function(df){
+  df %>%
+    # code msa typopogy
+    mutate(cbsa_type = case_when(
+      `Metropolitan/Micropolitan Statistical Area`=="Metropolitan Statistical Area" ~ "metro",
+      `Metropolitan/Micropolitan Statistical Area`=="Micropolitan Statistical Area" ~ "micro",
+      is.na(`Metropolitan/Micropolitan Statistical Area`) ~ "nonmetro"))
+}
+
+
+def_metrosize <- function(df){
+  df %>%
+    mutate(cbsa_size = ifelse(cbsa_type=="metro",
+                              case_when(
+                                cbsa_pop > 1000000 ~ "large metro",
+                                cbsa_pop <= 1000000 & cbsa_pop >= 250000 ~ "medium metro",
+                                cbsa_pop < 250000 ~ "small metro"),
+                              cbsa_type))
+}
+
+
+
+def_metro100 <- function(df){
+  temp <- (df %>%
+             select(cbsa_code, cbsa_pop) %>%
+             unique()%>%
+             filter(rank(desc(cbsa_pop)) <=100))$cbsa_code
+
+  df <- df%>%mutate(cbsa_type = case_when(cbsa_code %in% temp ~ "top100",
+                                          T ~ cbsa_code))
+  return(df)
+}
+
+def_countytype <- function(df){
+  df %>%
+    # create county type labels, using Alan.B methodology (see below)
+    mutate(co_type = ifelse(cbsa_type == "top100",
+                            # in top 100, create new labels based on urbanized area
+                            case_when(
+                              co_pcturban>99 ~ "Urban counties",
+                              co_pcturban>95 & co_pcturban<=99~ "High-density suburban counties",
+                              co_pcturban>75 & co_pcturban<=95~ "Mature suburban counties",
+                              co_pcturban>25 & co_pcturban<=75~ "Emerging suburban counties",
+                              co_pcturban<=25~ "Exurban counties"),
+                            # not in top 100, keep original type labels
+                            paste0(cbsa_type," counties")))
+}
 
 
 # function to construct the master file -----------------
@@ -32,7 +130,7 @@ update.master <- function(){
 
     # classify metro types
     def_metrotype%>%
-    
+
     # rename and keep only the selected columns
     select(stco_fips = GEOID,
            co_name = NAME,
