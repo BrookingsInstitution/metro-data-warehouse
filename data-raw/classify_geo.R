@@ -2,7 +2,7 @@
 def_metrotype <- function(df){
   df %>%
     # code msa typopogy
-    mutate(type.cbsa = case_when(
+    mutate(cbsa_type = case_when(
       `Metropolitan/Micropolitan Statistical Area`=="Metropolitan Statistical Area" ~ "metro",
       `Metropolitan/Micropolitan Statistical Area`=="Micropolitan Statistical Area" ~ "micro",
       is.na(`Metropolitan/Micropolitan Statistical Area`) ~ "nonmetro"))
@@ -11,40 +11,40 @@ def_metrotype <- function(df){
 
 def_metrosize <- function(df){
   df %>%
-    mutate(size.cbsa = ifelse(type.cbsa=="metro",
+    mutate(cbsa_size = ifelse(cbsa_type=="metro",
                               case_when(
-                                population.cbsa > 1000000 ~ "Large metro",
-                                population.cbsa <= 1000000 & population.cbsa >= 250000 ~ "Medium metro",
-                                population.cbsa < 250000 ~ "Small metro"),
-                              type.cbsa))
+                                cbsa_pop > 1000000 ~ "large metro",
+                                cbsa_pop <= 1000000 & cbsa_pop >= 250000 ~ "medium metro",
+                                cbsa_pop < 250000 ~ "small metro"),
+                             cbsa_type))
 }
 
 
 
 def_metro100 <- function(df){
   temp <- (df %>%
-    select(code.cbsa, population.cbsa) %>%
+    select(cbsa_code, cbsa_pop) %>%
     unique()%>%
-    filter(rank(desc(population.cbsa)) <=100))$code.cbsa
+    filter(rank(desc(cbsa_pop)) <=100))$cbsa_code
 
-  df <- df%>%mutate(type.cbsa = case_when(code.cbsa %in% temp ~ "top100",
-                                          T ~ type.cbsa))
+  df <- df%>%mutate(cbsa_type = case_when(cbsa_code %in% temp ~ "top100",
+                                          T ~ cbsa_code))
   return(df)
   }
 
 def_countytype <- function(df){
   df %>%
     # create county type labels, using Alan.B methodology (see below)
-    mutate(type.county = ifelse(type.cbsa == "top100",
+    mutate(co_type = ifelse(cbsa_type == "top100",
                                 # in top 100, create new labels based on urbanized area
                                 case_when(
-                                  pct.urban.county>99 ~ "Urban counties",
-                                  pct.urban.county>95 & pct.urban.county<=99~ "High-density suburban counties",
-                                  pct.urban.county>75 & pct.urban.county<=95~ "Mature suburban counties",
-                                  pct.urban.county>25 & pct.urban.county<=75~ "Emerging suburban counties",
-                                  pct.urban.county<=25~ "Exurban counties"),
+                                  co_pcturban>99 ~ "Urban counties",
+                                  co_pcturban>95 & co_pcturban<=99~ "High-density suburban counties",
+                                  co_pcturban>75 & co_pcturban<=95~ "Mature suburban counties",
+                                  co_pcturban>25 & co_pcturban<=75~ "Emerging suburban counties",
+                                  co_pcturban<=25~ "Exurban counties"),
                                 # not in top 100, keep original type labels
-                                paste0(type.cbsa," counties")))
+                                paste0(cbsa_type," counties")))
 }
 
 # Alan's methodology =========================================
