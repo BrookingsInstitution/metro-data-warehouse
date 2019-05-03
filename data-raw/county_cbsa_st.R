@@ -20,6 +20,7 @@ urban_url <- "https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County
 cbp_year <- 2016
 acs_year <- 2017
 
+
 # function to construct the master file -----------------
 update.master <- function(){
 
@@ -31,29 +32,29 @@ update.master <- function(){
 
     # classify metro types
     def_metrotype%>%
-
+    
     # rename and keep only the selected columns
-    select(code.county = GEOID,
-           name.county = NAME,
-           population.county = B01003_001E,
-           employment.county = EMP,
-           pct.urban.county,
-           code.cbsa = `CBSA Code`,
-           name.cbsa = `CBSA Title`,
-           type.cbsa)%>%
+    select(stco_fips = GEOID,
+           co_name = NAME,
+           co_pop = B01003_001E,
+           co_emp = EMP,
+           co_pcturban = pct.urban.county,
+           cbsa_code = `CBSA Code`,
+           cbsa_name = `CBSA Title`,
+           cbsa_type)%>%
 
     # Create state code and name from counties
-    mutate(code.state = substr(code.county,1,2),
-           name.state = gsub(".+\\, ","",name.county))%>%
+    mutate(st_fips = substr(stco_fips,1,2),
+           st_name = gsub(".+\\, ","",co_name))%>%
 
     # Construct cbsa and state sum from county population and employment
-    group_by(code.cbsa)%>%
-    mutate(population.cbsa = case_when(!is.na(code.cbsa) ~ sum(population.county)),
-           employment.cbsa = case_when(!is.na(code.cbsa) ~ sum(employment.county))
+    group_by(cbsa_code)%>%
+    mutate(cbsa_pop = case_when(!is.na(cbsa_code) ~ sum(co_pop)),
+           cbsa_emp = case_when(!is.na(cbsa_code) ~ sum(co_emp))
     )%>%
-    group_by(code.state)%>%
-    mutate(population.state = sum(population.county),
-           employment.state = sum(employment.county))%>%
+    group_by(st_fips)%>%
+    mutate(st_emp = sum(co_pop),
+           st_emp = sum(co_emp))%>%
     ungroup()%>%
 
     # def other classifications
@@ -62,7 +63,7 @@ update.master <- function(){
     def_countytype%>%
 
     # order columns
-    select(contains("county"),contains("state"),contains("cbsa"))
+    select(contains("co_"),contains("st_"),contains("cbsa_"))
 
   # save output
    return(county_cbsa_st)
