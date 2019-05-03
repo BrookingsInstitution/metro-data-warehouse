@@ -1,8 +1,22 @@
 ## code to prepare `naics` dataset goes here
 
 # update
-source("data-raw/fetch_new_data.R")
+library(dplyr)
+source("R/readxl_online.R")
 url <- "https://www.census.gov/eos/www/naics/2017NAICS/2-6%20digit_2017_Codes.xlsx"
+
+# get naics data ----------------------
+
+get_naics <- function(url){
+  tmp <- readxl_online(url)%>%
+    # remove columns contain only nas
+    select_if(~sum(!is.na(.)) > 0)%>%
+    select(-1)
+
+  names(tmp) <- c("code.naics","name.naics")
+  return(tmp)
+}
+
 
 # wrangle to wide relation file
 reshape_naics <- function(url){
