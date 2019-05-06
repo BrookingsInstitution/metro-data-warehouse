@@ -119,21 +119,32 @@ def_metro100 <- function(df) {
   return(df)
 }
 
+
+def_countytype_sub <- function(df){
+  # Alan's methods, sub-county: primary cities
+ }
+
 def_countytype <- function(df) {
   df %>%
-    # create county type labels, using Alan.B methodology (see below)
-    mutate(co_type = ifelse(cbsa_type == "top100",
+    # The Brookings urban classification of counties
+    # within the 100 largest metropolitan areas consists of
+
+    # urban core (counties that are at least 95 percent urbanized);
+    # mature suburbs (75 percent to 95 percent urbanized);
+    # emerging suburbs (25 percent to 75 percent urbanized);
+    # and exurbs (less than 25 percent urbanized).
+
+        mutate(co_type = ifelse(cbsa_type == "top100",
       # in top 100, create new labels based on urbanized area
       case_when(
-        co_pcturban > 99 ~ "Urban counties",
-        co_pcturban > 95 & co_pcturban <= 99 ~ "High-density suburban counties",
-        co_pcturban > 75 & co_pcturban <= 95 ~ "Mature suburban counties",
-        co_pcturban > 25 & co_pcturban <= 75 ~ "Emerging suburban counties",
-        co_pcturban <= 25 ~ "Exurban counties"
+        co_pcturban >= 95 ~ "Urban cores",
+        co_pcturban >= 75 & co_pcturban < 95 ~ "Mature suburbs",
+        co_pcturban >= 25 & co_pcturban < 75 ~ "Emerging suburbs",
+        co_pcturban < 25 ~ "Exurbs"
       ),
       # not in top 100, keep original type labels
-      paste0(cbsa_type, " counties")
-    ))
+      cbsa_type)
+    )
 }
 
 
