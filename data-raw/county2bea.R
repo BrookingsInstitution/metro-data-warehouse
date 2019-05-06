@@ -7,7 +7,8 @@ source("R/readxl_online.R")
 
 
 url <- "https://apps.bea.gov/regional/xls/FIPSModifications.xlsx"
-tmp <- readxl_online(url, skip = 1)
+tmp <- readxl_online(url)
+names(tmp) <- c("stco_fips")
 
 # BEA GDP by county, 2012-2015; https://www.bea.gov/data/gdp/gdp-county
 # next release: Dec.12, 2019
