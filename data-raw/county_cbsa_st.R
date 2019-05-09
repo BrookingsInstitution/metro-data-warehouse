@@ -208,7 +208,8 @@ county_cbsa_st <- update.master()
 
 # generate codebook
 source("R/write_meta.R")
-write_meta(county_cbsa_st,"data-raw")
+write_meta(df = county_cbsa_st,
+           filename = "data-raw/county_cbsa_st.txt")
 
 # [DEPRECIATED] generate codebook
 # dataMaid::makeDataReport(county_cbsa_st,

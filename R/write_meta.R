@@ -4,7 +4,7 @@ write_metadata <- function(df,filename){
 
   sink(filename)
   cat("Author: ", Sys.info()[["user"]])
-  cat("\nLast modified", date())
+  cat("\nLast modified: ", date())
 
 }
 
@@ -24,9 +24,3 @@ write_meta <- function(df,filename){
   write_summary(df,filename)
 }
 
-# test
-write_meta(df = county_cbsa_st,
-           filename = "data-raw/county_cbsa_st.txt")
-
-write_meta(df = county2bea,
-           filename = "data-raw/county2bea.txt")

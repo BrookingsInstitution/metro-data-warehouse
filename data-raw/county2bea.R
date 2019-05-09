@@ -77,4 +77,6 @@ county2bea <- county_gdp %>%
 usethis::use_data(county2bea,overwrite = TRUE)
 
 # METADATA file
-write_meta(county2bea,"data-raw")
+write_meta(df = county2bea,
+           filename = "data-raw/county2bea.txt")
+
