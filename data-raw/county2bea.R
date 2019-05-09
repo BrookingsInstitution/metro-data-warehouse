@@ -74,5 +74,7 @@ county2bea <- county_gdp %>%
          co_bea_gdp,ind_type,year)
 
 # SAVE =============================================
-
 usethis::use_data(county2bea,overwrite = TRUE)
+
+# METADATA file
+write_meta(county2bea,"data-raw")
