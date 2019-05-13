@@ -6,6 +6,7 @@ write_metadata <- function(df,filename){
   cat("Author: ", Sys.info()[["user"]])
   cat("\nLast modified: ", date())
   cat("\nFile location: ",getwd())
+  sink()
 
 }
 
