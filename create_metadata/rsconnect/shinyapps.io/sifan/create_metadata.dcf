@@ -1,0 +1,12 @@
+name: create_metadata
+title: create_metadata
+username:
+account: sifan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 928077
+bundleId: 2082096
+url: https://sifan.shinyapps.io/create_metadata/
+when: 1557800363.89575
+asMultiple: FALSE
+asStatic: FALSE
