@@ -1,23 +1,20 @@
 # Read .rda and export to .csv
 
 export2csv <- function(file){
-  load(file)
-  ob.name <- sub(".*\\/(.+)\\..+","\\1",file) # not sure if I did this right, need more testing
-  write.csv(mget(ob.name),
-            file = gsub(".Rda",".csv",file))
+  ob.name <- load(file)
+  write.csv(get(df),file = gsub(".rda",".csv",file))
 }
 
-# test
-export2csv("data/county2bea.Rda")
+# TEST RUN
+export2csv("data/county2bea.rda")
 
-# NOT WORKING, FIX LATER
+# Export all --------------------------------------
 export2csv_all <- function(folder){
   filepaths <- list.files(folder,full.names = T)
   files <- filepaths[grep(".rda", filepaths)]
 
-  # purrr::map(files,export2csv)
-  # return(files)
+  purrr::map(files,export2csv)
 }
 
-# DON"T RUN
-# export2csv_all("data")
+# TEST RUN
+export2csv_all("data")
