@@ -44,8 +44,10 @@ ui <- fluidPage(
 
     # Show data head
     mainPanel(
-      # textOutput("metadata"),
-      tableOutput("contents")
+
+      tableOutput("contents"),
+      tableOutput("metadata")
+
     )
   )
 )
@@ -74,10 +76,10 @@ server <- function(input, output) {
     head(load())
   )
 
-  # # display metadata (fix formatting)
-  # output$metadata <- renderPrint(
-  #   skimr::skim(load())
-  # )
+  # display metadata (fix formatting)
+  output$metadata <- renderTable(
+    skimr::skim_to_wide(load())
+  )
 
   # create metadata for download
   output$download_metadata <- downloadHandler(
@@ -85,7 +87,8 @@ server <- function(input, output) {
       paste0("meta_", input$file1$name)
     },
     content = function(file) {
-      write.csv(skimr::skim_to_wide(load()), file, row.names = FALSE)
+      write.csv(skimr::skim_to_wide(load())%>%mut,
+                file, row.names = FALSE)
     }
   )
 }
