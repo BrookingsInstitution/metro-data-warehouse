@@ -4,7 +4,7 @@
 # Date: Fri Apr 26 11:23:04 2019
 # --------------
 library(censusapi)
-library(dataMaid)
+library(readxl)
 library(dplyr)
 library(stringr)
 source("R/readxl_online.R")
