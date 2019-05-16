@@ -47,24 +47,23 @@ library(readr)
 # 2) zcta2county
 # 3) place2county
 
-tract2place_raw <- read_csv("data-raw/tract2place_raw.csv")
 zcta2county_raw <- read_csv("data-raw/zcta2county_raw.csv")
 
 zcta2county <- zcta2county_raw %>%
-  
+
   # remove the long-form variable names in the second row
   slice(-1) %>%
-  
+
   # because of this second header, numerics were coerced to character
   # change them back
   mutate_at(.vars = vars(contains("pop"),
                          contains("afact"),
                          contains("AFACT")),
             .funs = as.numeric) %>%
-  
+
   # select needed columns and rename
   select(zcta_fips = zcta5,
-         stcofips = county,
+         stco_fips = county,
          st_fips = state,
          st_ab = stab,
          co_name = cntyname,
@@ -74,4 +73,4 @@ zcta2county <- zcta2county_raw %>%
          afact2 = AFACT2)
 
 skimr::skim(zcta2county)
-usethis::use_data(zcta2county_raw)
+usethis::use_data(zcta2county_raw, overwrite = T)

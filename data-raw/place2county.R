@@ -26,26 +26,26 @@ library(readr)
 place2county_raw <- read_csv("data-raw/place2county_raw.csv")
 
 place2county <- place2county_raw %>%
-  
+
   # remove the long-form variable names in the second row
   slice(-1) %>%
-  
+
   # because of this second header, numerics were coerced to character
   # change them back
   mutate_at(.vars = vars(contains("pop"),
                          contains("afact"),
                          contains("AFACT")),
             .funs = as.numeric) %>%
-  
+
   # unite state fips with county fips
   unite(col = stpl_fips,
         state, placefp,
         sep = "",
         remove = FALSE) %>%
-  
+
   # select needed columns and rename
   select(stpl_fips,
-         stcofips = county,
+         stco_fips = county,
          st_fips = state,
          st_ab = stab,
          pl_name = placenm,
@@ -57,4 +57,4 @@ place2county <- place2county_raw %>%
 
 skimr::skim(place2county)
 
-usethis::use_data(place2county)
+usethis::use_data(place2county, overwrite = T)
