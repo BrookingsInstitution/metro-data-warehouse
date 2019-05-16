@@ -2,9 +2,10 @@
 # rank cbsa by population
 get_code_cbsa100 <- function(){
   df <- county_cbsa_st %>%
-    select(code.cbsa,population.cbsa) %>%
+    select(cbsa_code,cbsa_type) %>%
     unique()%>%
-    filter(rank(desc(population.cbsa)) <=100)
-  return(df$code.cbsa)
+    filter(cbsa_type == "top100")
+  return(df$cbsa_code)
 }
 
+get_code_cbsa100()
