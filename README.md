@@ -13,27 +13,46 @@ You can install the version in development of metro.data from Github with:
 devtools::install_github("BrookingsInstitution/metro.data")
 ```
 
-## Example
+## Datasets
 
-Get relation file of county, cbsa, and state
+### Get relation file of county, cbsa, and state
 ``` r
 head(county_cbsa_st)
 
 
-# A tibble: 6 x 16
-  code.county name.county population.coun~ employment.coun~ pct.urban.county type.county code.state name.state population.state
-  <chr>       <chr>                  <dbl>            <dbl>            <dbl> <chr>       <chr>      <chr>                 <dbl>
-1 01099       Monroe Cou~            21745             5400            21.0  nonmetro c~ 01         Alabama             4850771
-2 01079       Lawrence C~            33288             3138             8.71 metro coun~ 01         Alabama             4850771
-3 01081       Lee County~           156597            43945            72.6  metro coun~ 01         Alabama             4850771
-4 01093       Marion Cou~            30058             7656            11.2  nonmetro c~ 01         Alabama             4850771
-5 01107       Pickens Co~            20170             2639             0    metro coun~ 01         Alabama             4850771
-6 01119       Sumter Cou~            13084             2991             0    nonmetro c~ 01         Alabama             4850771
-# ... with 7 more variables: employment.state <dbl>, code.cbsa <chr>, name.cbsa <chr>, type.cbsa <chr>, population.cbsa <dbl>,
-#   employment.cbsa <dbl>, size.cbsa <chr>
+# A tibble: 6 x 15
+  stco_fips co_name co_pop co_emp co_pcturban co_type st_fips st_name st_emp cbsa_code cbsa_name
+  <chr>     <chr>    <dbl>  <dbl>       <dbl> <fct>   <chr>   <chr>    <dbl> <chr>     <chr>    
+1 01099     Monroe~  21745   5400       21.0  rural ~ 01      Alabama 1.61e6 NA        NA       
+2 01079     Lawren~  33288   3138        8.71 small ~ 01      Alabama 1.61e6 19460     Decatur,~
+3 01081     Lee Co~ 156597  43945       72.6  small ~ 01      Alabama 1.61e6 12220     Auburn-O~
+4 01093     Marion~  30058   7656       11.2  rural ~ 01      Alabama 1.61e6 NA        NA       
+5 01107     Picken~  20170   2639        0    small ~ 01      Alabama 1.61e6 46220     Tuscaloo~
+6 01119     Sumter~  13084   2991        0    rural ~ 01      Alabama 1.61e6 NA        NA       
+# ... with 4 more variables: cbsa_type <fct>, cbsa_pop <dbl>, cbsa_emp <dbl>, cbsa_size <fct>
+```
+### Get place to county crosswalk
+
+
+
+
+## Functions
+### Get cbsa code of top 100 metros
+
+``` r
+get_code_cbsa100()
+
+  [1] "13820" "46060" "38060" "30780" "32820" "41860" "41940" "40900" "41740" "31080" "40140" "23420" "12540"
+ [14] "37100" "44700" "19740" "17820" "35300" "25540" "49340" "14860" "37980" "35840" "27260" "19660" "33100"
+ [27] "45300" "37340" "36740" "29460" "15980" "47900" "12060" "12260" "46520" "14260" "41180" "16980" "26900"
+ [40] "17140" "31140" "19780" "36540" "28140" "48620" "35380" "12940" "14460" "39300" "44140" "12580" "24340"
+ [53] "19820" "33460" "27140" "29820" "35620" "10900" "10740" "10580" "45060" "40380" "15380" "39100" "20500"
+ [66] "16740" "47260" "49180" "24660" "39580" "49660" "17460" "18140" "19430" "10420" "45780" "36420" "46140"
+ [79] "38900" "25420" "38300" "42540" "17900" "16700" "24860" "34980" "28940" "19100" "41700" "12420" "26420"
+ [92] "21340" "32580" "41620" "36260" "39340" "40060" "42660" "33340" "31540"
 
 ```
 
-Create a metadata file here: https://sifan.shinyapps.io/create_metadata/
+### Create a metadata file here using an R Shiny app: https://sifan.shinyapps.io/create_metadata/
 
 
