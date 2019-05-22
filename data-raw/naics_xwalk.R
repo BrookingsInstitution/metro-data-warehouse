@@ -13,14 +13,14 @@ get_naics_17_12<- function(url){
     # remove columns contain only nas
     select_if(~sum(!is.na(.)) > 0)
 
-  names(tmp) <- c("code.naics6.2017","name.naics6.2017","code.naics6.2012","name.naics6.2012")
+  names(tmp) <- c("code_naics6_2017","name_naics6_2017","code_naics6_2012","name_naics6_2012")
   return(tmp)
 }
 
 get_clustermapping <- function(url){
   tmp <- readxl_online(url,sheet = "NAICS",col_types = "text")
-  names(tmp) <- c("code.naics6.all","code.naics6.2012","code.naics6.2007","code.naics6.2002","code.naics6.1997",
-                  "name.naics6.all", "traded.naics6",
+  names(tmp) <- c("code_naics6_all","code_naics6_2012","code_naics6_2007","code_naics6_2002","code_naics6_1997",
+                  "name_naics6_all", "traded.naics6",
                   "code.cluster.naics6","name.cluster.naics6","code.subcluster.naics6","name.subcluster.naics6")
   return(tmp)
 
@@ -32,28 +32,28 @@ naics_17_12 <- get_naics_17_12(url_naics)
 naics_12_07 <- get_clustermapping(url_cluster)
 
 naics_all <- naics_17_12 %>%
-    full_join(naics_12_07, by = c("code.naics6.2017"="code.naics6.2012"))
+    full_join(naics_12_07, by = c("code_naics6_2017"="code_naics6_2012"))
 
 
 naics_xwalk <- bind_rows(
     # codes that didn't change
     naics_all %>%
-      filter(!is.na(code.naics6.all)),
+      filter(!is.na(code_naics6_all)),
 
     # use 2017-2012 corrspondance to define new NAICS codes using 2012 code
     naics_all %>%
-      filter(is.na(code.naics6.all))%>%
-      select(code.naics6.2017,name.naics6.2017,code.naics6.2012)%>%
-      left_join(naics_12_07,by = "code.naics6.2012")%>%
+      filter(is.na(code_naics6_all))%>%
+      select(code_naics6_2017,name_naics6_2017,code_naics6_2012)%>%
+      left_join(naics_12_07,by = "code_naics6_2012")%>%
       select(-contains("2012"))%>%
       unique()
   )%>%
     mutate(traded.naics6 = as.factor(traded.naics6),
-           code.naics6.all = ifelse(is.na(code.naics6.all),code.naics6.2017,code.naics6.all),
-           name.naics6.all = ifelse(is.na(name.naics6.all),name.naics6.2017,name.naics6.all))%>%
-    select(code.naics6.all,code.naics6.2017,code.naics6.2012,code.naics6.2007,code.naics6.2002,code.naics6.2002,code.naics6.1997,
-           name.naics6.all,name.naics6.2017,traded.naics6, contains("cluster"))%>%
-    arrange(desc(traded.naics6),code.naics6.all)
+           code_naics6_all = ifelse(is.na(code_naics6_all),code_naics6_2017,code_naics6_all),
+           name_naics6_all = ifelse(is.na(name_naics6_all),name_naics6_2017,name_naics6_all))%>%
+    select(code_naics6_all,code_naics6_2017,code_naics6_2012,code_naics6_2007,code_naics6_2002,code_naics6_2002,code_naics6_1997,
+           name_naics6_all,name_naics6_2017,traded.naics6, contains("cluster"))%>%
+    arrange(desc(traded.naics6),code_naics6_all)
 
 # save
 skimr::skim(naics_xwalk)

@@ -60,6 +60,13 @@ advanced_industries <- read.csv("V:/Sifan/R/xwalk/advanced industries.csv") %>%
 naics <- reshape_naics(url) %>%
   left_join(advanced_industries, by = "naics4_code")
 
+naics <- naics %>%
+  left_join(naics_xwalk[c("code.naics6.2017","traded.naics6")],by = c("naics6_code" = "code.naics6.2017"))
+
+naics <- naics %>%
+  mutate(naics6_traded = as.factor(traded.naics6),
+         naics4_aitype = as.factor(naics4_aitype))
+
 # codebook
 skimr::skim(naics)
 
