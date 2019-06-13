@@ -8,4 +8,4 @@ get_code_cbsa100 <- function(){
   return(df$cbsa_code)
 }
 
-get_code_cbsa100()
+# get_code_cbsa100()

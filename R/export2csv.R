@@ -6,7 +6,7 @@ export2csv <- function(file){
 }
 
 # TEST RUN
-export2csv("data/county2bea.rda")
+# export2csv("data/county2bea.rda")
 
 # Export all --------------------------------------
 export2csv_all <- function(folder){
@@ -17,4 +17,4 @@ export2csv_all <- function(folder){
 }
 
 # TEST RUN
-export2csv_all("data")
+# export2csv_all("data")
