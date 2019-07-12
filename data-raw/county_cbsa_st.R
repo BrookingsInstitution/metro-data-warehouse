@@ -7,7 +7,7 @@ library(censusapi)
 library(readxl)
 library(dplyr)
 library(stringr)
-source("R/readxl_online.R")
+source("R/tools.R")
 
 # update delinations, population and employment from census ================
 # Require api key from census, sign up here: https://api.census.gov/data/key_signup.html
@@ -34,7 +34,7 @@ get_county.pop <- function(acs_year) {
 
     # take out Puerto Rico counties
     filter(state != "72") %>%
-    mutate(stco_fips = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0")))
+    mutate(stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0")))
 }
 
 # get latest county employment estimates from county business pattern using censusapi::
@@ -56,14 +56,14 @@ get_county.emp <- function(cbp_year) {
         TRUE ~ county
       ),
 
-      stco_fips = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0"))
+      stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0"))
     )
 }
 
-# download and read xls file from: https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
+# download and read xwalk file from: https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
 get_msa2county <- function(url) {
   readxl_online(url, skip = 2) %>%
-    mutate(stco_fips = paste0(
+    mutate(stco_code = paste0(
       str_pad(`FIPS State Code`, 2, "left", "0"),
       str_pad(`FIPS County Code`, 3, "left", "0")
     ))
@@ -78,7 +78,7 @@ get_county_urban_rural <- function(url) {
         STATENAME == "Alaska" & COUNTYNAME == "Wade Hampton" ~ "158",
         TRUE ~ COUNTY
       ),
-      stco_fips = paste0(STATE, COUNTY)
+      stco_code = paste0(STATE, COUNTY)
     ) %>%
     rename(pct.urban.county = POPPCT_URBAN)
 }
@@ -160,16 +160,16 @@ def_countytype <- function(df) {
 
 # merge all files
 county_cbsa_st <- get_county.pop(acs_year) %>%
-  left_join(get_county.emp(cbp_year), by = "stco_fips") %>%
-  left_join(get_msa2county(cbsa_url), by = "stco_fips") %>%
-  left_join(get_county_urban_rural(urban_url), by = "stco_fips") %>%
+  left_join(get_county.emp(cbp_year), by = "stco_code") %>%
+  left_join(get_msa2county(cbsa_url), by = "stco_code") %>%
+  left_join(get_county_urban_rural(urban_url), by = "stco_code") %>%
 
   # classify metro types
   def_metrotype() %>%
 
   # rename and keep only the selected columns
   select(
-    stco_fips,
+    stco_code,
     co_name = NAME,
     co_pop = B01003_001E,
     co_emp = EMP,
@@ -181,7 +181,7 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
 
   # Create state code and name from counties
   mutate(
-    st_fips = substr(stco_fips, 1, 2),
+    st_fips = substr(stco_code, 1, 2),
     st_name = gsub(".+\\, ", "", co_name)
   ) %>%
 
