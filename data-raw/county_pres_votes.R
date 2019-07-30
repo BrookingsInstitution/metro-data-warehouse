@@ -5,6 +5,6 @@ library(dplyr)
 library(stringr)
 
 county_pres_votes <- county_pres_votes%>%
-  mutate(stco_fips = str_pad(fip, 5, "left", pad = "0"))
+  mutate(stco_code = str_pad(fip, 5, "left", pad = "0"))
 
 usethis::use_data(county_pres_votes, overwrite = T)
