@@ -32,7 +32,7 @@ source("data-raw/create_basic_geometries_helper.R")
 # when tigris downloads geographies they extend over water boundaries
 # we will first import a "nation" shape that outlines the coast and other borders
 # then we will clip state and other geographies to that extent
-nation_sf <- tigris::nation() %>%
+nation_sf <- tigris::nation(year = 2018) %>%
 
   # for some reason, this particular tigris function can't import directly as sf
   # so convert it now
@@ -72,20 +72,20 @@ nation_sf <- nation_sf %>%
 
 # sf refers to spatial data, ld/hd refers to low definition / high definition
 # cleanup functions from helper script
-states51_sf_ld <- tigris::states(class = "sf", cb = TRUE) %>%
+states51_sf_ld <- tigris::states(class = "sf", cb = TRUE, year = 2018) %>%
   cleanup_tigris()
-states51_sf_hd <- tigris::states(class = "sf", cb = FALSE) %>%
-  cleanup_tigris()
-
-counties51_sf_ld <- tigris::counties(class = "sf", cb = TRUE) %>%
-  cleanup_tigris()
-counties51_sf_hd <- tigris::counties(class = "sf", cb = FALSE) %>%
+states51_sf_hd <- tigris::states(class = "sf", cb = FALSE, year = 2018) %>%
   cleanup_tigris()
 
+counties51_sf_ld <- tigris::counties(class = "sf", cb = TRUE, year = 2018) %>%
+  cleanup_tigris()
+counties51_sf_hd <- tigris::counties(class = "sf", cb = FALSE, year = 2018) %>%
+  cleanup_tigris()
 
-cbsas51_sf_ld <- tigris::core_based_statistical_areas(class = "sf", cb = TRUE) %>%
+
+cbsas51_sf_ld <- tigris::core_based_statistical_areas(class = "sf", cb = TRUE, year = 2018) %>%
   cleanup_tigris2()
-cbsas51_sf_hd <- tigris::core_based_statistical_areas(class = "sf", cb = FALSE) %>%
+cbsas51_sf_hd <- tigris::core_based_statistical_areas(class = "sf", cb = FALSE, year = 2018) %>%
   cleanup_tigris2()
 
 metros51_sf_hd <- cbsas51_sf_hd %>%
