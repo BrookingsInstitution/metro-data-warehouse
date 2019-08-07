@@ -182,6 +182,11 @@ states51_inset_ld <- rbind(states49_sf_ld,
                            AK_inset_ld %>% st_transform(crs = crs_NAD83),
                            HI_inset_ld %>% st_transform(crs = crs_NAD83))
 
+states51_inset_hd <- rbind(states49_sf_hd,
+                           AK_inset_hd %>% st_transform(crs = crs_NAD83),
+                           HI_inset_hd %>% st_transform(crs = crs_NAD83))
+
+
 # use mapview to check the appearance
 # mapview(continentalus_sf) + mapview(AK_inset_sf) + mapview(HI_inset_sf)
 
@@ -353,6 +358,13 @@ st_write(obj = HI_sf_ld %>% st_transform(crs = crs_NAD83), dsn = "data/HI_ld.shp
 # inset geometries
 ##====================================##
 
+## STATES
+# hd
+st_write(obj = states51_inset_hd %>% st_transform(crs = crs_NAD83), dsn = "data/HI_inset_hd.shp")
+
+# ld
+st_write(obj = states51_inset_ld %>% st_transform(crs = crs_NAD83), dsn = "data/HI_inset_hd.shp")
+
 ## COUNTIES INSETS
 # hd
 st_write(obj = countiesAK_inset_hd, dsn = "data/countiesAK_inset_hd.shp")
@@ -397,6 +409,7 @@ st_write(obj = top100_inset_ld,   dsn = "data/top100_inset_ld.shp")
 # hd
 st_write(obj = AK_inset_hd %>% st_transform(crs = crs_NAD83), dsn = "data/AK_inset_hd.shp")
 st_write(obj = HI_inset_hd %>% st_transform(crs = crs_NAD83), dsn = "data/HI_inset_hd.shp")
+
 # ld
 st_write(obj = AK_inset_ld %>% st_transform(crs = crs_NAD83), dsn = "data/AK_inset_ld.shp")
 st_write(obj = HI_inset_ld %>% st_transform(crs = crs_NAD83), dsn = "data/HI_inset_ld.shp")
