@@ -10,7 +10,8 @@ The goal of metro.data is to streamline data analysis workflow at Brookings Metr
 You can install the version in development of metro.data from Github with: 
 
 ``` r
-devtools::install_github("BrookingsInstitution/metro.data")
+devtools::install_github("BrookingsInstitution/metro-data-warehouse")
+library(metro.data)
 ```
 
 ## Datasets
@@ -33,8 +34,17 @@ head(county_cbsa_st)
 ```
 ### Get place to county crosswalk
 
+``` r
+head(place2county)
+  stpl_fips stco_fips st_fips st_ab             pl_name      co_name  pl_pop16 afact1 afact2
+1   0100100     01017      01    AL      Abanda CDP, AL  Chambers AL   189.912      1  0.006
+2   0100124     01067      01    AL  Abbeville city, AL     Henry AL  2666.561      1  0.155
+3   0100460     01073      01    AL Adamsville city, AL Jefferson AL  4529.245      1  0.007
+4   0100484     01133      01    AL    Addison town, AL   Winston AL   736.979      1  0.031
+5   0100676     01065      01    AL      Akron town, AL      Hale AL   337.748      1  0.023
+6   0100820     01117      01    AL  Alabaster city, AL    Shelby AL 32769.300      1  0.156
 
-
+``` r
 
 ## Functions
 ### Get cbsa code of top 100 metros
