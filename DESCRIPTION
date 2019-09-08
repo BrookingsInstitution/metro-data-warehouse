@@ -2,7 +2,7 @@ Package: metro.data
 Title: Brookings Metro Data Analysis Tools 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Sifan,
+    person(given = "Sifan",
            family = "Liu",
            role = c("aut", "cre"),
            email = "sliu@brookings.edu",
