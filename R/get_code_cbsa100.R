@@ -1,7 +1,7 @@
 
 # rank cbsa by population
 get_code_cbsa100 <- function(){
-  df <- county_cbsa_st %>%
+  df <- metro.data::county_cbsa_st %>%
     select(cbsa_code,cbsa_type) %>%
     unique()%>%
     filter(cbsa_type == "top100")
