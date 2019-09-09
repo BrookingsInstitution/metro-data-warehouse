@@ -7,18 +7,16 @@ Authors@R:
            role = c("aut", "cre"),
            email = "sliu@brookings.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Common crosswalks and ACS variables for data analysis.
+Description: functions and datasets for Brookings Metro
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
 Imports: 
     dplyr,
-    censusapi,
     readxl,
     httr,
     magrittr,
     stringr,
-    skimr,
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 
