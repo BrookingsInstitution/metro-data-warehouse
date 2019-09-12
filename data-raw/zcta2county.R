@@ -20,10 +20,6 @@ library(readr)
 ##============================================================================##
 
 
-# 2) zcta2county
-
-zcta2county_raw <- read_csv("data-raw/zcta2county_raw.csv")
-
 ##============================================================================##
 # Clean common outputs from MABLE Geocorr 2018
 #
@@ -62,11 +58,11 @@ zcta2county <- zcta2county_raw %>%
             .funs = as.numeric) %>%
 
   # select needed columns and rename
-  select(zcta_fips = zcta5,
-         stco_fips = county,
-         st_fips = state,
+  select(zcta_code = zcta5,
+         stco_code = county,
+         st_code = state,
          st_ab = stab,
-         co_name = cntyname,
+         stco_name = cntyname,
          zcta_name = zipname,
          zcta_pop16 = pop16,
          afact1 = afact,
