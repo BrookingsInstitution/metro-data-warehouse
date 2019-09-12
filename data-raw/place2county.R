@@ -38,15 +38,15 @@ place2county <- place2county_raw %>%
             .funs = as.numeric) %>%
 
   # unite state fips with county fips
-  unite(col = stpl_fips,
+  unite(col = stpl_code,
         state, placefp,
         sep = "",
         remove = FALSE) %>%
 
   # select needed columns and rename
-  select(stpl_fips,
-         stco_fips = county,
-         st_fips = state,
+  select(stpl_code,
+         stco_code = county,
+         st_code = state,
          st_ab = stab,
          pl_name = placenm,
          co_name = cntyname,
