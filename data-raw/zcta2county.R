@@ -69,4 +69,4 @@ zcta2county <- zcta2county_raw %>%
          afact2 = AFACT2)
 
 skimr::skim(zcta2county)
-usethis::use_data(zcta2county_raw, overwrite = T)
+usethis::use_data(zcta2county, overwrite = T)
