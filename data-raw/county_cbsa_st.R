@@ -7,7 +7,9 @@ library(censusapi)
 library(readxl)
 library(dplyr)
 library(stringr)
-source("R/tools.R")
+
+source("R/readxl_online.R")
+
 
 # update delinations, population and employment from census ================
 # Require api key from census, sign up here: https://api.census.gov/data/key_signup.html
@@ -96,22 +98,6 @@ def_metrotype <- function(df) {
 }
 
 
-def_metrosize <- function(df) {
-  df %>%
-
-    # apply only to metros
-    mutate(cbsa_size = ifelse(cbsa_type == "metro",
-      case_when(
-        cbsa_pop > 1000000 ~ "large metro",
-        cbsa_pop <= 1000000 & cbsa_pop >= 250000 ~ "medium metro",
-        cbsa_pop < 250000 ~ "small metro"
-      ),
-
-      # no size classifications for micros and non-metros
-      cbsa_type
-    ))
-}
-
 def_metro100 <- function(df) {
   temp <- (df %>%
     select(cbsa_code, cbsa_pop) %>%
@@ -120,10 +106,7 @@ def_metro100 <- function(df) {
 
   # for metros, change cbsa_type to top100 if applies
   df <- df %>%
-    mutate(cbsa_type = case_when(
-      cbsa_code %in% temp ~ "top100",
-      T ~ cbsa_type
-    ))
+    mutate(cbsa_is.top100 = ifelse(cbsa_code %in% temp,T,F))
   return(df)
 }
 
@@ -170,7 +153,7 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
   # rename and keep only the selected columns
   select(
     stco_code,
-    co_name = NAME,
+    stco_name = NAME,
     co_pop = B01003_001E,
     co_emp = EMP,
     co_pcturban = pct.urban.county,
@@ -181,8 +164,8 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
 
   # Create state code and name from counties
   mutate(
-    st_fips = substr(stco_code, 1, 2),
-    st_name = gsub(".+\\, ", "", co_name)
+    st_code = substr(stco_code, 1, 2),
+    st_name = gsub(".+\\, ", "", stco_name)
   ) %>%
 
   # Construct cbsa and state sum from county population and employment
@@ -191,15 +174,14 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
     cbsa_pop = case_when(!is.na(cbsa_code) ~ sum(co_pop)),
     cbsa_emp = case_when(!is.na(cbsa_code) ~ sum(co_emp))
   ) %>%
-  group_by(st_fips) %>%
+  group_by(st_code) %>%
   mutate(
-    st_emp = sum(co_pop),
+    st_pop = sum(co_pop),
     st_emp = sum(co_emp)
   ) %>%
   ungroup() %>%
 
   # def other classifications
-  def_metrosize() %>%
   def_metro100() %>%
   def_countytype() %>%
 
@@ -209,23 +191,17 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
 
 # generate codebook
 county_cbsa_st <- county_cbsa_st %>%
-  mutate_at(c("cbsa_size", "cbsa_type", "co_type"), as.factor)
+  mutate_at(c("cbsa_type", "co_type"), as.factor)
 
 skimr::skim(county_cbsa_st)
 
-# save codebook
-# source("R/write_meta.R")
-# write_meta(
-#   df = county_cbsa_st,
-#   filename = "data-raw/county_cbsa_st.txt"
-# )
-
-# [DEPRECIATED] generate codebook
-# dataMaid::makeDataReport(county_cbsa_st,
-#   mode = "summarize",
-#   render = F,
-#   replace = T, listChecks = F, codebook = T
-# )
-
 # save output
 usethis::use_data(county_cbsa_st, overwrite = T)
+
+cbsa_st <- county_cbsa_st %>%
+  select(-contains("co_")) %>%
+  filter(!is.na(cbsa_code))%>%
+  unique()
+
+usethis::use_data(cbsa_st, overwrite = T)
+
