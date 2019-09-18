@@ -42,6 +42,7 @@ puma2county <- puma2county_raw %>%
   select(stco_code = county14,
          st_code = state,
          st_ab = stab,
+         puma_code = puma12,
          puma_name = PUMAname,
          stco_name = cntyname2,
          pl_pop16 = pop16,
