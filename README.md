@@ -22,7 +22,7 @@ head(county_cbsa_st)
 
 
 # A tibble: 6 x 15
-  stco_fips co_name co_pop co_emp co_pcturban co_type st_fips st_name st_emp cbsa_code cbsa_name
+  stco_code co_name co_pop co_emp co_pcturban co_type st_fips st_name st_emp cbsa_code cbsa_name
   <chr>     <chr>    <dbl>  <dbl>       <dbl> <fct>   <chr>   <chr>    <dbl> <chr>     <chr>    
 1 01099     Monroe~  21745   5400       21.0  rural ~ 01      Alabama 1.61e6 NA        NA       
 2 01079     Lawren~  33288   3138        8.71 small ~ 01      Alabama 1.61e6 19460     Decatur,~
@@ -61,6 +61,12 @@ get_code_cbsa100()
  [79] "38900" "25420" "38300" "42540" "17900" "16700" "24860" "34980" "28940" "19100" "41700" "12420" "26420"
  [92] "21340" "32580" "41620" "36260" "39340" "40060" "42660" "33340" "31540"
 
+```
+### Create a plot using Brookings Metro theme
+ 
+```r
+bbplot(iris, aes(x = iris$Sepal.Length, y = iris$Sepal.Width))+
+  geom_point()
 ```
 
 ### Create a metadata file here using an R Shiny app: https://sifan.shinyapps.io/create_metadata/
