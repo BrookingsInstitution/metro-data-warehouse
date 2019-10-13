@@ -1,3 +1,11 @@
+#' Read excel files from online locations
+#'
+#' This function loads xls or zipped xls file from online locations. I
+#' @param type .xlsx, .xls or .zip
+#' @param url Path to the file
+#' @return A dataframe
+#' @export
+
 readxl_online <- function(url, type = NULL, ...) {
   test <- stringr::str_detect(url, "[.]xls|[.]zip")
   if (test == FALSE) {
@@ -28,4 +36,6 @@ readxl_online <- function(url, type = NULL, ...) {
   df <- httr::GET(url, httr::write_disk(paste0("tmp", type), overwrite = TRUE))
   df <- readxl::read_excel(paste0("tmp", type),...)
 
+
 }
+

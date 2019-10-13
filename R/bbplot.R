@@ -1,8 +1,12 @@
+#' This function masks ggplot2 with Brookings Metro theme
+#' @return ggplot2 object
+#' @export
+
 bbplot <- function(...){
-  ggplot(...)+
-    theme(rect = element_rect(fill = "#D9D9D9", colour=NA),
-          panel.background = element_rect(fill = "#D9D9D9",colour = NA),
-          plot.background = element_rect(fill = "#D9D9D9", colour = NA),
+  ggplot2::ggplot(...)+
+    ggplot2::theme(rect = element_rect(fill = NA, colour=NA),
+          panel.background = element_rect(fill = NA,colour = NA),
+          plot.background = element_rect(fill = NA, colour = NA),
           panel.grid = element_blank(),
           legend.background = element_rect(fill = "transparent"),
           legend.key = element_rect(fill = "transparent", color = NA),
