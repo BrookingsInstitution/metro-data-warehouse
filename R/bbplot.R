@@ -3,6 +3,7 @@
 #' @export
 
 bbplot <- function(...){
+  require(ggplot2)
   ggplot2::ggplot(...)+
     ggplot2::theme(rect = element_rect(fill = NA, colour=NA),
           panel.background = element_rect(fill = NA,colour = NA),

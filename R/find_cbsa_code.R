@@ -6,6 +6,6 @@
 find_cbsa_code <- function(msa){
   metro.data::county_cbsa_st %>%
     dplyr::filter(grepl(!!msa,cbsa_name,ignore.case = T)) %>%
-    select(cbsa_code, cbsa_name) %>%
+    dplyr::select(cbsa_code, cbsa_name) %>%
     unique()
 }
