@@ -44,9 +44,8 @@ head(place2county)
 5   0100676     01065      01    AL      Akron town, AL      Hale AL   337.748      1  0.023
 6   0100820     01117      01    AL  Alabaster city, AL    Shelby AL 32769.300      1  0.156
 
-``` r
+``` 
 
-## Functions
 ### Get cbsa code of top 100 metros
 
 ``` r
@@ -62,6 +61,9 @@ cbsa100_code
  [92] "21340" "32580" "41620" "36260" "39340" "40060" "42660" "33340" "31540"
 
 ```
+
+
+## Functions
 ### Create a plot using Brookings Metro theme
  
 ```r
