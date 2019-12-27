@@ -3,7 +3,7 @@
 #' @return wide dataframe
 #' @export
 
-get_multiyr <- function(geo, vars, yr, key,...){
+get_multiyr_acs <- function(geo, vars, yr, key,...){
   map_dfr(yr,function(x)
     tidycensus::get_acs(geography = geo, variable = vars, year = x, key = key, output = "wide",...) %>%
       dplyr::mutate(year = x)
