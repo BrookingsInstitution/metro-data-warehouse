@@ -19,8 +19,8 @@ key <- Sys.getenv("CENSUS_API_KEY")
 # Wed Apr 24 13:33:37 2019 ------------------------------
 cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2018/delineation-files/list1_Sep_2018.xls"
 urban_url <- "https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls"
-cbp_year <- 2016
-acs_year <- 2017
+cbp_year <- 2017
+acs_year <- 2018
 
 # functions to fetch data ------------------------------
 
@@ -44,7 +44,7 @@ get_county.emp <- function(cbp_year) {
   getCensus(
     name = "cbp",
     vintage = cbp_year,
-    vars = c("EMP", "GEO_TTL"),
+    vars = c("EMP"),
     region = "county:*",
     key = key
   ) %>%
@@ -52,11 +52,11 @@ get_county.emp <- function(cbp_year) {
       EMP = as.numeric(EMP),
 
       # fix two county names changes
-      county = case_when(
-        GEO_TTL == "Shannon County, South Dakota" ~ "102",
-        GEO_TTL == "Wade Hampton Census Area, Alaska" ~ "158",
-        TRUE ~ county
-      ),
+      # county = case_when(
+      #   GEO_TTL == "Shannon County, South Dakota" ~ "102",
+      #   GEO_TTL == "Wade Hampton Census Area, Alaska" ~ "158",
+      #   TRUE ~ county
+      # ),
 
       stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0"))
     )
@@ -121,7 +121,7 @@ def_countytype <- function(df) {
     # emerging suburbs (25 percent to 75 percent urbanized);
     # and exurbs (less than 25 percent urbanized).
 
-    mutate(co_type = ifelse(cbsa_type == "top100",
+    mutate(co_type = ifelse(cbsa_is.top100,
       # in top 100, create new labels based on urbanized area
       case_when(
         co_pcturban >= 95 ~ "Urban cores",
@@ -205,3 +205,5 @@ cbsa_st <- county_cbsa_st %>%
 
 usethis::use_data(cbsa_st, overwrite = T)
 
+write.csv(county_cbsa_st, "data-raw/county_cbsa_st.csv")
+write.csv(cbsa_st, "data-raw/cbsa_st.csv")
