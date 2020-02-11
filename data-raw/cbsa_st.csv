@@ -1,0 +1,999 @@
+"","st_code","st_name","st_pop","st_emp","cbsa_code","cbsa_name","cbsa_type","cbsa_pop","cbsa_emp","cbsa_is.top100"
+"1","28","Mississippi",2988762,919495,"24740","Greenville, MS","micro",47086,13924,FALSE
+"2","28","Mississippi",2988762,919495,"25620","Hattiesburg, MS","metro",167859,55470,FALSE
+"3","28","Mississippi",2988762,919495,"46180","Tupelo, MS","micro",165070,70001,FALSE
+"4","28","Mississippi",2988762,919495,"24900","Greenwood, MS","micro",39933,12610,FALSE
+"5","28","Mississippi",2988762,919495,"24980","Grenada, MS","micro",21278,7543,FALSE
+"6","28","Mississippi",2988762,919495,"32820","Memphis, TN-MS-AR","metro",1337738,539734,TRUE
+"7","28","Mississippi",2988762,919495,"17380","Cleveland, MS","micro",32592,9339,FALSE
+"8","28","Mississippi",2988762,919495,"32620","McComb, MS","micro",39737,13022,FALSE
+"9","28","Mississippi",2988762,919495,"25060","Gulfport-Biloxi, MS","metro",409668,132684,FALSE
+"10","28","Mississippi",2988762,919495,"46980","Vicksburg, MS","micro",47075,16191,FALSE
+"11","28","Mississippi",2988762,919495,"32940","Meridian, MS","micro",103358,33085,FALSE
+"12","28","Mississippi",2988762,919495,"44260","Starkville, MS","micro",59309,14139,FALSE
+"13","28","Mississippi",2988762,919495,"38100","Picayune, MS","micro",55149,8088,FALSE
+"14","28","Mississippi",2988762,919495,"27140","Jackson, MS","metro",598355,224030,TRUE
+"15","28","Mississippi",2988762,919495,"37060","Oxford, MS","micro",53459,17428,FALSE
+"16","28","Mississippi",2988762,919495,"18060","Columbus, MS","micro",59437,21467,FALSE
+"17","28","Mississippi",2988762,919495,"15020","Brookhaven, MS","micro",34432,10692,FALSE
+"18","28","Mississippi",2988762,919495,"29860","Laurel, MS","micro",84983,25669,FALSE
+"19","28","Mississippi",2988762,919495,"26940","Indianola, MS","micro",26532,5456,FALSE
+"20","28","Mississippi",2988762,919495,"35020","Natchez, MS-LA","micro",51568,13927,FALSE
+"21","28","Mississippi",2988762,919495,"48500","West Point, MS","micro",19808,4435,FALSE
+"22","29","Missouri",6090062,2463019,"32180","Marshall, MO","micro",23102,7065,FALSE
+"23","29","Missouri",6090062,2463019,"32340","Maryville, MO","micro",22547,5809,FALSE
+"24","29","Missouri",6090062,2463019,"16020","Cape Girardeau, MO-IL","metro",97137,39925,FALSE
+"25","29","Missouri",6090062,2463019,"44180","Springfield, MO","metro",458834,187570,FALSE
+"26","29","Missouri",6090062,2463019,"28140","Kansas City, MO-KS","metro",2106632,954263,TRUE
+"27","29","Missouri",6090062,2463019,"48460","West Plains, MO","micro",40102,12434,FALSE
+"28","29","Missouri",6090062,2463019,"47660","Warrensburg, MO","micro",53689,10457,FALSE
+"29","29","Missouri",6090062,2463019,"30060","Lebanon, MO","micro",35507,11610,FALSE
+"30","29","Missouri",6090062,2463019,"40620","Rolla, MO","micro",44789,14248,FALSE
+"31","29","Missouri",6090062,2463019,"22100","Farmington, MO","micro",66342,18932,FALSE
+"32","29","Missouri",6090062,2463019,"41140","St. Joseph, MO-KS","metro",126779,48854,FALSE
+"33","29","Missouri",6090062,2463019,"25300","Hannibal, MO","micro",38889,14830,FALSE
+"34","29","Missouri",6090062,2463019,"27620","Jefferson City, MO","metro",151157,53991,FALSE
+"35","29","Missouri",6090062,2463019,"38740","Poplar Bluff, MO","micro",56426,17711,FALSE
+"36","29","Missouri",6090062,2463019,"41180","St. Louis, MO-IL","metro",2805551,1249653,TRUE
+"37","29","Missouri",6090062,2463019,"33020","Mexico, MO","micro",25735,6931,FALSE
+"38","29","Missouri",6090062,2463019,"28860","Kirksville, MO","micro",29827,7790,FALSE
+"39","29","Missouri",6090062,2463019,"22800","Fort Madison-Keokuk, IA-IL-MO","micro",59453,18293,FALSE
+"40","29","Missouri",6090062,2463019,"39500","Quincy, IL-MO","micro",76454,33402,FALSE
+"41","29","Missouri",6090062,2463019,"17860","Columbia, MO","metro",204250,85884,FALSE
+"42","29","Missouri",6090062,2463019,"28380","Kennett, MO","micro",30428,6923,FALSE
+"43","29","Missouri",6090062,2463019,"42740","Sedalia, MO","micro",42371,17664,FALSE
+"44","29","Missouri",6090062,2463019,"33620","Moberly, MO","micro",24945,7354,FALSE
+"45","29","Missouri",6090062,2463019,"22780","Fort Leonard Wood, MO","micro",52591,8587,FALSE
+"46","29","Missouri",6090062,2463019,"14700","Branson, MO","micro",54720,24001,FALSE
+"47","29","Missouri",6090062,2463019,"27900","Joplin, MO","metro",177440,70980,FALSE
+"48","30","Montana",1041732,360257,"15580","Butte-Silver Bow, MT","micro",34814,12733,FALSE
+"49","30","Montana",1041732,360257,"25740","Helena, MT","micro",78855,27164,FALSE
+"50","30","Montana",1041732,360257,"13740","Billings, MT","metro",177772,74052,FALSE
+"51","30","Montana",1041732,360257,"28060","Kalispell, MT","micro",98082,38395,FALSE
+"52","31","Nebraska",1904760,808260,"25580","Hastings, NE","micro",31583,13642,FALSE
+"53","31","Nebraska",1904760,808260,"30700","Lincoln, NE","metro",327221,144760,FALSE
+"54","31","Nebraska",1904760,808260,"42420","Scottsbluff, NE","micro",38217,13508,FALSE
+"55","31","Nebraska",1904760,808260,"24260","Grand Island, NE","metro",75551,33756,FALSE
+"56","31","Nebraska",1904760,808260,"30420","Lexington, NE","micro",25819,9436,FALSE
+"57","31","Nebraska",1904760,808260,"36540","Omaha-Council Bluffs, NE-IA","metro",922891,419890,TRUE
+"58","31","Nebraska",1904760,808260,"23340","Fremont, NE","micro",36683,16263,FALSE
+"59","31","Nebraska",1904760,808260,"43580","Sioux City, IA-NE-SD","metro",143638,67718,FALSE
+"60","31","Nebraska",1904760,808260,"13100","Beatrice, NE","micro",21595,7328,FALSE
+"61","31","Nebraska",1904760,808260,"28260","Kearney, NE","micro",55582,25062,FALSE
+"62","31","Nebraska",1904760,808260,"35740","Norfolk, NE","micro",48313,20858,FALSE
+"63","31","Nebraska",1904760,808260,"35820","North Platte, NE","micro",36773,12388,FALSE
+"64","31","Nebraska",1904760,808260,"18100","Columbus, NE","micro",33063,16615,FALSE
+"65","32","Nevada",2922849,1149619,"21980","Fallon, NV","micro",24010,5169,FALSE
+"66","32","Nevada",2922849,1149619,"23820","Gardnerville Ranchos, NV","micro",47828,17306,FALSE
+"67","32","Nevada",2922849,1149619,"49080","Winnemucca, NV","micro",16904,5732,FALSE
+"68","32","Nevada",2922849,1149619,"21220","Elko, NV","micro",54082,20105,FALSE
+"69","32","Nevada",2922849,1149619,"37220","Pahrump, NV","micro",43705,9285,FALSE
+"70","32","Nevada",2922849,1149619,"39900","Reno, NV","metro",454427,195817,FALSE
+"71","32","Nevada",2922849,1149619,"29820","Las Vegas-Henderson-Paradise, NV","metro",2141574,857591,TRUE
+"72","32","Nevada",2922849,1149619,"16180","Carson City, NV","metro",54467,20905,FALSE
+"73","32","Nevada",2922849,1149619,"22280","Fernley, NV","micro",53155,10494,FALSE
+"74","33","New Hampshire",1343622,569277,"28300","Keene, NH","micro",76263,26755,FALSE
+"75","33","New Hampshire",1343622,569277,"18180","Concord, NH","micro",149452,64695,FALSE
+"76","33","New Hampshire",1343622,569277,"30100","Lebanon, NH-VT","micro",217300,88232,FALSE
+"77","33","New Hampshire",1343622,569277,"14460","Boston-Cambridge-Newton, MA-NH","metro",4811732,2534539,TRUE
+"78","33","New Hampshire",1343622,569277,"29060","Laconia, NH","micro",60640,21622,FALSE
+"79","33","New Hampshire",1343622,569277,"31700","Manchester-Nashua, NH","metro",411087,186614,FALSE
+"80","33","New Hampshire",1343622,569277,"13620","Berlin, NH","micro",32038,8928,FALSE
+"81","34","New Jersey",8881845,3538599,"35620","New York-Newark-Jersey City, NY-NJ-PA","metro",19318471,8166817,TRUE
+"82","34","New Jersey",8881845,3538599,"47220","Vineland-Bridgeton, NJ","metro",153400,47231,FALSE
+"83","34","New Jersey",8881845,3538599,"37980","Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","metro",6069448,2628893,TRUE
+"84","34","New Jersey",8881845,3538599,"10900","Allentown-Bethlehem-Easton, PA-NJ","metro",834615,331950,TRUE
+"85","35","New Mexico",2092434,617213,"21580","Española, NM","micro",39307,6015,FALSE
+"86","35","New Mexico",2092434,617213,"29780","Las Vegas, NM","micro",32597,6976,FALSE
+"87","35","New Mexico",2092434,617213,"10740","Albuquerque, NM","metro",910012,303614,TRUE
+"88","35","New Mexico",2092434,617213,"10460","Alamogordo, NM","micro",65745,12262,FALSE
+"89","35","New Mexico",2092434,617213,"24380","Grants, NM","micro",26978,5382,FALSE
+"90","35","New Mexico",2092434,617213,"43500","Silver City, NM","micro",28061,6981,FALSE
+"91","35","New Mexico",2092434,617213,"19700","Deming, NM","micro",24264,4414,FALSE
+"92","35","New Mexico",2092434,617213,"23700","Gallup, NM","micro",72849,16515,FALSE
+"93","35","New Mexico",2092434,617213,"45340","Taos, NM","micro",32888,8915,FALSE
+"94","35","New Mexico",2092434,617213,"16100","Carlsbad-Artesia, NM","micro",57437,22547,FALSE
+"95","35","New Mexico",2092434,617213,"40760","Ruidoso, NM","micro",19482,5045,FALSE
+"96","35","New Mexico",2092434,617213,"26020","Hobbs, NM","micro",70126,23401,FALSE
+"97","35","New Mexico",2092434,617213,"42140","Santa Fe, NM","metro",148917,46842,FALSE
+"98","35","New Mexico",2092434,617213,"29740","Las Cruces, NM","metro",215338,52980,FALSE
+"99","36","New York",19618453,8008086,"10580","Albany-Schenectady-Troy, NY","metro",880481,353006,TRUE
+"100","36","New York",19618453,8008086,"45060","Syracuse, NY","metro",654705,259742,TRUE
+"101","36","New York",19618453,8008086,"38460","Plattsburgh, NY","micro",80794,24533,FALSE
+"102","36","New York",19618453,8008086,"42900","Seneca Falls, NY","micro",34612,10540,FALSE
+"103","36","New York",19618453,8008086,"35620","New York-Newark-Jersey City, NY-NJ-PA","metro",19318471,8166817,TRUE
+"104","36","New York",19618453,8008086,"31660","Malone, NY","micro",50692,10816,FALSE
+"105","36","New York",19618453,8008086,"40380","Rochester, NY","metro",1074667,453814,TRUE
+"106","36","New York",19618453,8008086,"18500","Corning, NY","micro",96927,25675,FALSE
+"107","36","New York",19618453,8008086,"24020","Glens Falls, NY","metro",126308,42072,FALSE
+"108","36","New York",19618453,8008086,"27460","Jamestown-Dunkirk-Fredonia, NY","micro",129656,40414,FALSE
+"109","36","New York",19618453,8008086,"13780","Binghamton, NY","metro",243447,79415,FALSE
+"110","36","New York",19618453,8008086,"12180","Auburn, NY","micro",77868,19031,FALSE
+"111","36","New York",19618453,8008086,"26460","Hudson, NY","micro",60919,16643,FALSE
+"112","36","New York",19618453,8008086,"15380","Buffalo-Cheektowaga, NY","metro",1131570,482984,TRUE
+"113","36","New York",19618453,8008086,"11220","Amsterdam, NY","micro",49426,15151,FALSE
+"114","36","New York",19618453,8008086,"27060","Ithaca, NY","metro",102962,48258,FALSE
+"115","36","New York",19618453,8008086,"18660","Cortland, NY","micro",48123,15006,FALSE
+"116","36","New York",19618453,8008086,"48060","Watertown-Fort Drum, NY","metro",114448,29772,FALSE
+"117","36","New York",19618453,8008086,"46540","Utica-Rome, NY","metro",293287,100149,FALSE
+"118","36","New York",19618453,8008086,"21300","Elmira, NY","metro",85740,30377,FALSE
+"119","36","New York",19618453,8008086,"36580","Oneonta, NY","micro",60244,18572,FALSE
+"120","36","New York",19618453,8008086,"12860","Batavia, NY","micro",58112,16485,FALSE
+"121","36","New York",19618453,8008086,"39100","Poughkeepsie-Newburgh-Middletown, NY","metro",672121,215318,TRUE
+"122","37","North Carolina",10155624,3689006,"25860","Hickory-Lenoir-Morganton, NC","metro",365339,135351,FALSE
+"123","37","North Carolina",10155624,3689006,"35100","New Bern, NC","metro",125519,31352,FALSE
+"124","37","North Carolina",10155624,3689006,"40580","Rocky Mount, NC","metro",147335,48269,FALSE
+"125","37","North Carolina",10155624,3689006,"22180","Fayetteville, NC","metro",515706,120741,FALSE
+"126","37","North Carolina",10155624,3689006,"11700","Asheville, NC","metro",449937,172341,FALSE
+"127","37","North Carolina",10155624,3689006,"16740","Charlotte-Concord-Gastonia, NC-SC","metro",2498431,1058398,TRUE
+"128","37","North Carolina",10155624,3689006,"40260","Roanoke Rapids, NC","micro",71923,17132,FALSE
+"129","37","North Carolina",10155624,3689006,"25780","Henderson, NC","micro",44482,13779,FALSE
+"130","37","North Carolina",10155624,3689006,"47260","Virginia Beach-Norfolk-Newport News, VA-NC","metro",1758598,621229,TRUE
+"131","37","North Carolina",10155624,3689006,"49180","Winston-Salem, NC","metro",661798,237640,TRUE
+"132","37","North Carolina",10155624,3689006,"28620","Kill Devil Hills, NC","micro",35741,14515,FALSE
+"133","37","North Carolina",10155624,3689006,"48980","Wilson, NC","micro",81336,31152,FALSE
+"134","37","North Carolina",10155624,3689006,"21020","Elizabeth City, NC","micro",52938,12455,FALSE
+"135","37","North Carolina",10155624,3689006,"24660","Greensboro-High Point, NC","metro",757810,323805,TRUE
+"136","37","North Carolina",10155624,3689006,"19000","Cullowhee, NC","micro",56510,15298,FALSE
+"137","37","North Carolina",10155624,3689006,"38240","Pinehurst-Southern Pines, NC","micro",95629,31029,FALSE
+"138","37","North Carolina",10155624,3689006,"31300","Lumberton, NC","micro",133442,31627,FALSE
+"139","37","North Carolina",10155624,3689006,"10620","Albemarle, NC","micro",61114,16253,FALSE
+"140","37","North Carolina",10155624,3689006,"39580","Raleigh-Cary, NC","metro",1302632,520170,TRUE
+"141","37","North Carolina",10155624,3689006,"20500","Durham-Chapel Hill, NC","metro",617365,274514,TRUE
+"142","37","North Carolina",10155624,3689006,"32000","Marion, NC","micro",45109,13541,FALSE
+"143","37","North Carolina",10155624,3689006,"34820","Myrtle Beach-Conway-North Myrtle Beach, SC-NC","metro",447775,138378,FALSE
+"144","37","North Carolina",10155624,3689006,"47820","Washington, NC","micro",47243,12576,FALSE
+"145","37","North Carolina",10155624,3689006,"28820","Kinston, NC","micro",57227,24290,FALSE
+"146","37","North Carolina",10155624,3689006,"22580","Forest City, NC","micro",66532,15861,FALSE
+"147","37","North Carolina",10155624,3689006,"27340","Jacksonville, NC","metro",193912,35541,FALSE
+"148","37","North Carolina",10155624,3689006,"41820","Sanford, NC","micro",60125,23548,FALSE
+"149","37","North Carolina",10155624,3689006,"48900","Wilmington, NC","metro",283251,108659,FALSE
+"150","37","North Carolina",10155624,3689006,"24140","Goldsboro, NC","metro",124002,33960,FALSE
+"151","37","North Carolina",10155624,3689006,"29900","Laurinburg, NC","micro",35262,9606,FALSE
+"152","37","North Carolina",10155624,3689006,"15500","Burlington, NC","metro",160576,59276,FALSE
+"153","38","North Dakota",752201,333146,"48780","Williston, ND","micro",34061,19329,FALSE
+"154","38","North Dakota",752201,333146,"19860","Dickinson, ND","micro",31822,14558,FALSE
+"155","38","North Dakota",752201,333146,"13900","Bismarck, ND","metro",126118,56813,FALSE
+"156","38","North Dakota",752201,333146,"22020","Fargo, ND-MN","metro",237003,122574,FALSE
+"157","38","North Dakota",752201,333146,"47420","Wahpeton, ND-MN","micro",22631,7532,FALSE
+"158","38","North Dakota",752201,333146,"24220","Grand Forks, ND-MN","metro",101991,42714,FALSE
+"159","38","North Dakota",752201,333146,"27420","Jamestown, ND","micro",21064,9156,FALSE
+"160","39","Ohio",11641879,4665959,"38580","Point Pleasant, WV-OH","micro",57134,13740,FALSE
+"161","39","Ohio",11641879,4665959,"35940","Norwalk, OH","micro",58457,17809,FALSE
+"162","39","Ohio",11641879,4665959,"11900","Athens, OH","micro",65936,13066,FALSE
+"163","39","Ohio",11641879,4665959,"17460","Cleveland-Elyria, OH","metro",2061766,918152,TRUE
+"164","39","Ohio",11641879,4665959,"18140","Columbus, OH","metro",2054062,874951,TRUE
+"165","39","Ohio",11641879,4665959,"46500","Urbana, OH","micro",38864,10448,FALSE
+"166","39","Ohio",11641879,4665959,"19430","Dayton-Kettering, OH","metro",802645,326374,TRUE
+"167","39","Ohio",11641879,4665959,"32020","Marion, OH","micro",65344,21747,FALSE
+"168","39","Ohio",11641879,4665959,"49300","Wooster, OH","micro",116208,40732,FALSE
+"169","39","Ohio",11641879,4665959,"17140","Cincinnati, OH-KY-IN","metro",2191667,946308,TRUE
+"170","39","Ohio",11641879,4665959,"34540","Mount Vernon, OH","micro",61215,18892,FALSE
+"171","39","Ohio",11641879,4665959,"31900","Mansfield, OH","metro",121324,41099,FALSE
+"172","39","Ohio",11641879,4665959,"22300","Findlay, OH","micro",75690,43148,FALSE
+"173","39","Ohio",11641879,4665959,"19580","Defiance, OH","micro",38279,13314,FALSE
+"174","39","Ohio",11641879,4665959,"48260","Weirton-Steubenville, WV-OH","metro",119338,33975,FALSE
+"175","39","Ohio",11641879,4665959,"48940","Wilmington, OH","micro",41896,15692,FALSE
+"176","39","Ohio",11641879,4665959,"47920","Washington Court House, OH","micro",28645,9931,FALSE
+"177","39","Ohio",11641879,4665959,"13340","Bellefontaine, OH","micro",45307,15997,FALSE
+"178","39","Ohio",11641879,4665959,"10420","Akron, OH","metro",704454,296361,TRUE
+"179","39","Ohio",11641879,4665959,"23380","Fremont, OH","micro",59299,23269,FALSE
+"180","39","Ohio",11641879,4665959,"43380","Sidney, OH","micro",48797,25502,FALSE
+"181","27","Minnesota",5527358,2606488,"33460","Minneapolis-St. Paul-Bloomington, MN-WI","metro",3542616,1804390,TRUE
+"182","27","Minnesota",5527358,2606488,"40340","Rochester, MN","metro",216035,113762,FALSE
+"183","27","Minnesota",5527358,2606488,"14660","Brainerd, MN","micro",92877,33030,FALSE
+"184","27","Minnesota",5527358,2606488,"31860","Mankato, MN","metro",100105,50288,FALSE
+"185","27","Minnesota",5527358,2606488,"10820","Alexandria, MN","micro",37203,17716,FALSE
+"186","27","Minnesota",5527358,2606488,"13420","Bemidji, MN","micro",46117,14167,FALSE
+"187","27","Minnesota",5527358,2606488,"29100","La Crosse-Onalaska, WI-MN","metro",136513,68320,FALSE
+"188","27","Minnesota",5527358,2606488,"22260","Fergus Falls, MN","micro",57992,19280,FALSE
+"189","27","Minnesota",5527358,2606488,"20260","Duluth, MN-WI","metro",289591,114815,FALSE
+"190","27","Minnesota",5527358,2606488,"41060","St. Cloud, MN","metro",196598,100928,FALSE
+"191","27","Minnesota",5527358,2606488,"22060","Faribault-Northfield, MN","micro",65765,24369,FALSE
+"192","27","Minnesota",5527358,2606488,"36940","Owatonna, MN","micro",36676,19629,FALSE
+"193","27","Minnesota",5527358,2606488,"48820","Willmar, MN","micro",42658,20065,FALSE
+"194","27","Minnesota",5527358,2606488,"35580","New Ulm, MN","micro",25211,13110,FALSE
+"195","27","Minnesota",5527358,2606488,"21860","Fairmont, MN","micro",19964,7769,FALSE
+"196","27","Minnesota",5527358,2606488,"12380","Austin, MN","micro",39602,13863,FALSE
+"197","27","Minnesota",5527358,2606488,"10660","Albert Lea, MN","micro",30526,11404,FALSE
+"198","27","Minnesota",5527358,2606488,"26780","Hutchinson, MN","micro",35825,15579,FALSE
+"199","48","Texas",27885195,NA,"26420","Houston-The Woodlands-Sugar Land, TX","metro",6779104,2599675,TRUE
+"200","48","Texas",27885195,NA,"28780","Kingsville, TX","micro",32020,6514,FALSE
+"201","48","Texas",27885195,NA,"18580","Corpus Christi, TX","metro",427532,155845,FALSE
+"202","48","Texas",27885195,NA,"11100","Amarillo, TX","metro",263412,95807,FALSE
+"203","48","Texas",27885195,NA,"41660","San Angelo, TX","metro",120131,40571,FALSE
+"204","48","Texas",27885195,NA,"38920","Port Lavaca, TX","micro",21807,8359,FALSE
+"205","48","Texas",27885195,NA,"47020","Victoria, TX","metro",99501,33922,FALSE
+"206","48","Texas",27885195,NA,"29700","Laredo, TX","metro",272053,78875,FALSE
+"207","48","Texas",27885195,NA,"39700","Raymondville, TX","micro",21754,2066,FALSE
+"208","48","Texas",27885195,NA,"31180","Lubbock, TX","metro",313123,115372,FALSE
+"209","48","Texas",27885195,NA,"10860","Alice, TX","micro",52547,15587,FALSE
+"210","48","Texas",27885195,NA,"25820","Hereford, TX","micro",18899,5443,FALSE
+"211","48","Texas",27885195,NA,"37420","Pampa, TX","micro",23570,5938,FALSE
+"212","48","Texas",27885195,NA,"45500","Texarkana, TX-AR","metro",150034,48004,FALSE
+"213","48","Texas",27885195,NA,"46340","Tyler, TX","metro",225015,89833,FALSE
+"214","48","Texas",27885195,NA,"13140","Beaumont-Port Arthur, TX","metro",395636,132171,FALSE
+"215","48","Texas",27885195,NA,"13700","Big Spring, TX","micro",36667,8946,FALSE
+"216","49","Utah",3045350,1208094,"41100","St. George, UT","metro",160537,50267,FALSE
+"217","49","Utah",3045350,1208094,"25720","Heber, UT","micro",71034,34222,FALSE
+"218","49","Utah",3045350,1208094,"36260","Ogden-Clearfield, UT","metro",652744,192865,TRUE
+"219","49","Utah",3045350,1208094,"16260","Cedar City, UT","micro",49691,13418,FALSE
+"220","49","Utah",3045350,1208094,"41620","Salt Lake City, UT","metro",1185990,608961,TRUE
+"221","49","Utah",3045350,1208094,"46860","Vernal, UT","micro",36323,8780,FALSE
+"222","49","Utah",3045350,1208094,"39220","Price, UT","micro",20356,5695,FALSE
+"223","49","Utah",3045350,1208094,"30860","Logan, UT-ID","metro",135615,44906,FALSE
+"224","49","Utah",3045350,1208094,"39340","Provo-Orem, UT","metro",601388,215315,TRUE
+"225","50","Vermont",624977,256833,"40860","Rutland, VT","micro",59273,22343,FALSE
+"226","50","Vermont",624977,256833,"15540","Burlington-South Burlington, VT","metro",218042,102620,FALSE
+"227","50","Vermont",624977,256833,"30100","Lebanon, NH-VT","micro",217300,88232,FALSE
+"228","51","Virginia",8413774,3252400,"14140","Bluefield, WV-VA","micro",109013,30106,FALSE
+"229","50","Vermont",624977,256833,"12740","Barre, VT","micro",58477,26056,FALSE
+"230","51","Virginia",8413774,3252400,"47900","Washington-Arlington-Alexandria, DC-VA-MD-WV","metro",6151521,2676308,TRUE
+"231","51","Virginia",8413774,3252400,"47260","Virginia Beach-Norfolk-Newport News, VA-NC","metro",1758598,621229,TRUE
+"232","51","Virginia",8413774,3252400,"40060","Richmond, VA","metro",1258398,541040,TRUE
+"233","51","Virginia",8413774,3252400,"44420","Staunton, VA","metro",121079,40023,FALSE
+"234","51","Virginia",8413774,3252400,"40220","Roanoke, VA","metro",313291,140143,FALSE
+"235","51","Virginia",8413774,3252400,"31340","Lynchburg, VA","metro",260668,99184,FALSE
+"236","51","Virginia",8413774,3252400,"32300","Martinsville, VA","micro",64689,20236,FALSE
+"237","51","Virginia",8413774,3252400,"25500","Harrisonburg, VA","metro",132835,51926,FALSE
+"238","51","Virginia",8413774,3252400,"28700","Kingsport-Bristol, TN-VA","metro",306394,104278,FALSE
+"239","51","Virginia",8413774,3252400,"13980","Blacksburg-Christiansburg, VA","metro",166675,48889,FALSE
+"240","51","Virginia",8413774,3252400,"16820","Charlottesville, VA","metro",213901,84420,FALSE
+"241","51","Virginia",8413774,3252400,"13720","Big Stone Gap, VA","micro",43015,11954,FALSE
+"242","51","Virginia",8413774,3252400,"49020","Winchester, VA-WV","metro",136305,55560,FALSE
+"243","51","Virginia",8413774,3252400,"19260","Danville, VA","micro",103188,32372,FALSE
+"244","54","West Virginia",1829054,541036,"17220","Clarksburg, WV","micro",93696,32444,FALSE
+"245","54","West Virginia",1829054,541036,"48540","Wheeling, WV-OH","metro",142664,54735,FALSE
+"246","54","West Virginia",1829054,541036,"25180","Hagerstown-Martinsburg, MD-WV","metro",280930,87342,FALSE
+"247","54","West Virginia",1829054,541036,"13220","Beckley, WV","metro",120358,33038,FALSE
+"248","54","West Virginia",1829054,541036,"26580","Huntington-Ashland, WV-KY-OH","metro",364446,114510,FALSE
+"249","54","West Virginia",1829054,541036,"16620","Charleston, WV","metro",267408,92295,FALSE
+"250","54","West Virginia",1829054,541036,"14140","Bluefield, WV-VA","micro",109013,30106,FALSE
+"251","54","West Virginia",1829054,541036,"49020","Winchester, VA-WV","metro",136305,55560,FALSE
+"252","54","West Virginia",1829054,541036,"48260","Weirton-Steubenville, WV-OH","metro",119338,33975,FALSE
+"253","54","West Virginia",1829054,541036,"19060","Cumberland, MD-WV","metro",99255,29972,FALSE
+"254","54","West Virginia",1829054,541036,"21900","Fairmont, WV","micro",56497,14791,FALSE
+"255","54","West Virginia",1829054,541036,"21180","Elkins, WV","micro",29065,9230,FALSE
+"256","54","West Virginia",1829054,541036,"37620","Parkersburg-Vienna, WV","metro",91353,30200,FALSE
+"257","54","West Virginia",1829054,541036,"34060","Morgantown, WV","metro",139089,53463,FALSE
+"258","53","Washington",7294336,2730176,"14740","Bremerton-Silverdale-Port Orchard, WA","metro",262475,59021,FALSE
+"259","53","Washington",7294336,2730176,"42660","Seattle-Tacoma-Bellevue, WA","metro",3809717,1726886,TRUE
+"260","53","Washington",7294336,2730176,"39420","Pullman, WA","micro",48593,10552,FALSE
+"261","53","Washington",7294336,2730176,"49420","Yakima, WA","metro",249325,70083,FALSE
+"262","53","Washington",7294336,2730176,"31020","Longview, WA","metro",105112,32299,FALSE
+"263","53","Washington",7294336,2730176,"16500","Centralia, WA","micro",76947,21138,FALSE
+"264","53","Washington",7294336,2730176,"10140","Aberdeen, WA","micro",71967,15980,FALSE
+"265","53","Washington",7294336,2730176,"36020","Oak Harbor, WA","micro",81636,12545,FALSE
+"266","53","Washington",7294336,2730176,"28420","Kennewick-Richland, WA","metro",284828,87957,FALSE
+"267","53","Washington",7294336,2730176,"34180","Moses Lake, WA","micro",94860,21927,FALSE
+"268","53","Washington",7294336,2730176,"13380","Bellingham, WA","metro",216812,75103,FALSE
+"269","53","Washington",7294336,2730176,"21260","Ellensburg, WA","micro",44825,11757,FALSE
+"270","53","Washington",7294336,2730176,"30300","Lewiston, ID-WA","metro",62492,22882,FALSE
+"271","53","Washington",7294336,2730176,"43220","Shelton, WA","micro",62627,9335,FALSE
+"272","53","Washington",7294336,2730176,"44060","Spokane-Spokane Valley, WA","metro",542089,199588,FALSE
+"273","53","Washington",7294336,2730176,"48300","Wenatchee, WA","metro",117128,37026,FALSE
+"274","55","Wisconsin",5778394,2521274,"27500","Janesville-Beloit, WI","metro",161769,59475,FALSE
+"275","55","Wisconsin",5778394,2521274,"33460","Minneapolis-St. Paul-Bloomington, MN-WI","metro",3542616,1804390,TRUE
+"276","55","Wisconsin",5778394,2521274,"49220","Wisconsin Rapids-Marshfield, WI","micro",73274,37082,FALSE
+"277","55","Wisconsin",5778394,2521274,"11540","Appleton, WI","metro",234561,115721,FALSE
+"278","55","Wisconsin",5778394,2521274,"27020","Iron Mountain, MI-WI","micro",29907,13051,FALSE
+"279","55","Wisconsin",5778394,2521274,"48020","Watertown-Fort Atkinson, WI","micro",84652,30252,FALSE
+"280","55","Wisconsin",5778394,2521274,"16980","Chicago-Naperville-Elgin, IL-IN-WI","metro",9536428,4165528,TRUE
+"281","55","Wisconsin",5778394,2521274,"24580","Green Bay, WI","metro",317702,156929,FALSE
+"282","55","Wisconsin",5778394,2521274,"48140","Wausau-Weston, WI","metro",163112,73859,FALSE
+"283","55","Wisconsin",5778394,2521274,"31940","Marinette, WI-MI","micro",63771,20611,FALSE
+"284","55","Wisconsin",5778394,2521274,"39540","Racine, WI","metro",195398,66364,FALSE
+"285","55","Wisconsin",5778394,2521274,"36780","Oshkosh-Neenah, WI","metro",169926,85726,FALSE
+"286","55","Wisconsin",5778394,2521274,"38420","Platteville, WI","micro",51828,13694,FALSE
+"287","55","Wisconsin",5778394,2521274,"43100","Sheboygan, WI","metro",115205,53151,FALSE
+"288","55","Wisconsin",5778394,2521274,"31540","Madison, WI","metro",647281,333811,TRUE
+"289","55","Wisconsin",5778394,2521274,"13180","Beaver Dam, WI","micro",87776,31468,FALSE
+"290","55","Wisconsin",5778394,2521274,"48580","Whitewater, WI","micro",103013,35459,FALSE
+"291","55","Wisconsin",5778394,2521274,"31820","Manitowoc, WI","micro",79407,29279,FALSE
+"292","55","Wisconsin",5778394,2521274,"12660","Baraboo, WI","micro",63596,32313,FALSE
+"293","55","Wisconsin",5778394,2521274,"20740","Eau Claire, WI","metro",166626,72741,FALSE
+"294","55","Wisconsin",5778394,2521274,"20260","Duluth, MN-WI","metro",289591,114815,FALSE
+"295","55","Wisconsin",5778394,2521274,"33340","Milwaukee-Waukesha, WI","metro",1575907,783764,TRUE
+"296","56","Wyoming",581836,198404,"23940","Gillette, WY","micro",62218,23334,FALSE
+"297","56","Wyoming",581836,198404,"16220","Casper, WY","metro",80610,31203,FALSE
+"298","56","Wyoming",581836,198404,"27220","Jackson, WY-ID","micro",34139,20685,FALSE
+"299","56","Wyoming",581836,198404,"40540","Rock Springs, WY","micro",44117,15643,FALSE
+"300","56","Wyoming",581836,198404,"43260","Sheridan, WY","micro",30012,10923,FALSE
+"301","56","Wyoming",581836,198404,"29660","Laramie, WY","micro",38102,9646,FALSE
+"302","56","Wyoming",581836,198404,"21740","Evanston, WY","micro",20609,6725,FALSE
+"303","56","Wyoming",581836,198404,"40180","Riverton, WY","micro",40076,10201,FALSE
+"304","01","Alabama",4864680,1632958,"19460","Decatur, AL","metro",152293,46522,FALSE
+"305","01","Alabama",4864680,1632958,"12220","Auburn-Opelika, AL","metro",159287,46327,FALSE
+"306","01","Alabama",4864680,1632958,"46220","Tuscaloosa, AL","metro",249824,85304,FALSE
+"307","01","Alabama",4864680,1632958,"17980","Columbus, GA-AL","metro",320144,99653,FALSE
+"308","01","Alabama",4864680,1632958,"22520","Florence-Muscle Shoals, AL","metro",147080,49018,FALSE
+"309","01","Alabama",4864680,1632958,"33860","Montgomery, AL","metro",373589,130956,FALSE
+"310","01","Alabama",4864680,1632958,"26620","Huntsville, AL","metro",450612,181686,FALSE
+"311","01","Alabama",4864680,1632958,"13820","Birmingham-Hoover, AL","metro",1082561,436077,TRUE
+"312","01","Alabama",4864680,1632958,"18980","Cullman, AL","micro",82313,25233,FALSE
+"313","01","Alabama",4864680,1632958,"42460","Scottsboro, AL","micro",52094,13413,FALSE
+"314","01","Alabama",4864680,1632958,"45180","Talladega-Sylacauga, AL","micro",80565,24653,FALSE
+"315","01","Alabama",4864680,1632958,"33660","Mobile, AL","metro",431302,156341,FALSE
+"316","01","Alabama",4864680,1632958,"21460","Enterprise, AL","micro",51288,13378,FALSE
+"317","01","Alabama",4864680,1632958,"37120","Ozark, AL","micro",49255,10893,FALSE
+"318","01","Alabama",4864680,1632958,"23460","Gadsden, AL","metro",102939,30604,FALSE
+"319","01","Alabama",4864680,1632958,"22840","Fort Payne, AL","micro",71200,17669,FALSE
+"320","01","Alabama",4864680,1632958,"27530","Jasper, AL","micro",64493,14537,FALSE
+"321","01","Alabama",4864680,1632958,"21640","Eufaula, AL-GA","micro",28058,7067,FALSE
+"322","01","Alabama",4864680,1632958,"11500","Anniston-Oxford, AL","metro",115098,36301,FALSE
+"323","01","Alabama",4864680,1632958,"10700","Albertville, AL","micro",95145,31276,FALSE
+"324","01","Alabama",4864680,1632958,"20020","Dothan, AL","metro",147967,50838,FALSE
+"325","01","Alabama",4864680,1632958,"10760","Alexander City, AL","micro",51491,11544,FALSE
+"326","02","Alaska",738516,258260,"21820","Fairbanks, AK","metro",99653,27095,FALSE
+"327","02","Alaska",738516,258260,"28540","Ketchikan, AK","micro",13804,4769,FALSE
+"328","02","Alaska",738516,258260,"11260","Anchorage, AK","metro",399576,162723,FALSE
+"329","02","Alaska",738516,258260,"27940","Juneau, AK","micro",32330,11147,FALSE
+"330","04","Arizona",6946685,2335934,"38060","Phoenix-Mesa-Chandler, AZ","metro",4673634,1726596,TRUE
+"331","04","Arizona",6946685,2335934,"40940","Safford, AZ","micro",37879,7389,FALSE
+"332","04","Arizona",6946685,2335934,"35700","Nogales, AZ","micro",46584,11932,FALSE
+"333","04","Arizona",6946685,2335934,"29420","Lake Havasu City-Kingman, AZ","metro",206064,41986,FALSE
+"334","04","Arizona",6946685,2335934,"22380","Flagstaff, AZ","metro",140217,53114,FALSE
+"335","04","Arizona",6946685,2335934,"49740","Yuma, AZ","metro",207829,45094,FALSE
+"336","05","Arkansas",2990671,1008950,"22620","Forrest City, AR","micro",26294,5503,FALSE
+"337","05","Arkansas",2990671,1008950,"42620","Searcy, AR","micro",78804,22406,FALSE
+"338","05","Arkansas",2990671,1008950,"26260","Hope, AR","micro",30458,8153,FALSE
+"339","05","Arkansas",2990671,1008950,"31620","Magnolia, AR","micro",23892,7036,FALSE
+"340","05","Arkansas",2990671,1008950,"30780","Little Rock-North Little Rock-Conway, AR","metro",734502,283598,TRUE
+"341","05","Arkansas",2990671,1008950,"38220","Pine Bluff, AR","metro",92345,21677,FALSE
+"342","05","Arkansas",2990671,1008950,"32820","Memphis, TN-MS-AR","metro",1337738,539734,TRUE
+"343","05","Arkansas",2990671,1008950,"22900","Fort Smith, AR-OK","metro",249072,91556,FALSE
+"344","05","Arkansas",2990671,1008950,"22220","Fayetteville-Springdale-Rogers, AR","metro",503585,210590,FALSE
+"345","05","Arkansas",2990671,1008950,"40780","Russellville, AR","micro",85217,28424,FALSE
+"346","05","Arkansas",2990671,1008950,"26300","Hot Springs, AR","metro",98296,34587,FALSE
+"347","39","Ohio",11641879,4665959,"46780","Van Wert, OH","micro",28281,9985,FALSE
+"348","39","Ohio",11641879,4665959,"31930","Marietta, OH","micro",60671,22897,FALSE
+"349","39","Ohio",11641879,4665959,"47540","Wapakoneta, OH","micro",45784,20672,FALSE
+"350","39","Ohio",11641879,4665959,"41400","Salem, OH","micro",104003,27154,FALSE
+"351","39","Ohio",11641879,4665959,"24820","Greenville, OH","micro",51734,16356,FALSE
+"352","39","Ohio",11641879,4665959,"45780","Toledo, OH","metro",645329,275095,TRUE
+"353","39","Ohio",11641879,4665959,"27160","Jackson, OH","micro",32524,9008,FALSE
+"354","39","Ohio",11641879,4665959,"45660","Tiffin, OH","micro",55475,17102,FALSE
+"355","39","Ohio",11641879,4665959,"15940","Canton-Massillon, OH","metro",401053,150465,FALSE
+"356","39","Ohio",11641879,4665959,"30620","Lima, OH","metro",103642,46478,FALSE
+"357","39","Ohio",11641879,4665959,"18740","Coshocton, OH","micro",36574,8360,FALSE
+"358","39","Ohio",11641879,4665959,"15340","Bucyrus-Galion, OH","micro",42021,12386,FALSE
+"359","39","Ohio",11641879,4665959,"15740","Cambridge, OH","micro",39274,13872,FALSE
+"360","39","Ohio",11641879,4665959,"16380","Celina, OH","micro",40806,16265,FALSE
+"361","39","Ohio",11641879,4665959,"17060","Chillicothe, OH","micro",77051,23530,FALSE
+"362","39","Ohio",11641879,4665959,"49660","Youngstown-Warren-Boardman, OH-PA","metro",545488,192993,FALSE
+"363","39","Ohio",11641879,4665959,"11780","Ashtabula, OH","micro",98136,25210,FALSE
+"364","40","Oklahoma",3918137,1316992,"20340","Duncan, OK","micro",43983,11893,FALSE
+"365","40","Oklahoma",3918137,1316992,"11620","Ardmore, OK","micro",58339,25801,FALSE
+"366","40","Oklahoma",3918137,1316992,"36420","Oklahoma City, OK","metro",1369759,506241,TRUE
+"367","40","Oklahoma",3918137,1316992,"33060","Miami, OK","micro",31566,9122,FALSE
+"368","40","Oklahoma",3918137,1316992,"22900","Fort Smith, AR-OK","metro",249072,91556,FALSE
+"369","40","Oklahoma",3918137,1316992,"46140","Tulsa, OK","metro",985233,401196,TRUE
+"370","40","Oklahoma",3918137,1316992,"34780","Muskogee, OK","micro",69084,22830,FALSE
+"371","40","Oklahoma",3918137,1316992,"20460","Durant, OK","micro",45759,10172,FALSE
+"372","40","Oklahoma",3918137,1316992,"38620","Ponca City, OK","micro",44880,15008,FALSE
+"373","40","Oklahoma",3918137,1316992,"25100","Guymon, OK","micro",21121,7765,FALSE
+"374","40","Oklahoma",3918137,1316992,"21420","Enid, OK","metro",62190,21514,FALSE
+"375","40","Oklahoma",3918137,1316992,"32540","McAlester, OK","micro",44382,10657,FALSE
+"376","40","Oklahoma",3918137,1316992,"49260","Woodward, OK","micro",25039,8096,FALSE
+"377","40","Oklahoma",3918137,1316992,"45140","Tahlequah, OK","micro",48599,9447,FALSE
+"378","40","Oklahoma",3918137,1316992,"44660","Stillwater, OK","micro",81512,23738,FALSE
+"379","40","Oklahoma",3918137,1316992,"43060","Shawnee, OK","micro",72000,18277,FALSE
+"380","40","Oklahoma",3918137,1316992,"30020","Lawton, OK","metro",128490,32718,FALSE
+"381","40","Oklahoma",3918137,1316992,"48220","Weatherford, OK","micro",29209,9667,FALSE
+"382","40","Oklahoma",3918137,1316992,"21120","Elk City, OK","micro",22621,8421,FALSE
+"383","40","Oklahoma",3918137,1316992,"11060","Altus, OK","micro",25384,6723,FALSE
+"384","41","Oregon",4081943,1576499,"41420","Salem, OR","metro",416980,121784,FALSE
+"385","41","Oregon",4081943,1576499,"32780","Medford, OR","metro",214267,75967,FALSE
+"386","41","Oregon",4081943,1576499,"38900","Portland-Vancouver-Hillsboro, OR-WA","metro",2417931,1047457,TRUE
+"387","41","Oregon",4081943,1576499,"10540","Albany-Lebanon, OR","metro",122870,36602,FALSE
+"388","41","Oregon",4081943,1576499,"24420","Grants Pass, OR","metro",85481,23460,FALSE
+"389","41","Oregon",4081943,1576499,"25840","Hermiston-Pendleton, OR","micro",88113,26316,FALSE
+"390","41","Oregon",4081943,1576499,"35440","Newport, OR","micro",47881,14672,FALSE
+"391","41","Oregon",4081943,1576499,"45520","The Dalles, OR","micro",25866,7603,FALSE
+"392","41","Oregon",4081943,1576499,"21660","Eugene-Springfield, OR","metro",368882,125153,FALSE
+"393","41","Oregon",4081943,1576499,"36620","Ontario, OR-ID","micro",53472,13899,FALSE
+"394","41","Oregon",4081943,1576499,"11820","Astoria, OR","micro",38562,14861,FALSE
+"395","41","Oregon",4081943,1576499,"15060","Brookings, OR","micro",22507,5494,FALSE
+"396","41","Oregon",4081943,1576499,"29260","La Grande, OR","micro",26028,7383,FALSE
+"397","42","Pennsylvania",12791181,5335524,"37980","Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","metro",6069448,2628893,TRUE
+"398","42","Pennsylvania",12791181,5335524,"30260","Lewisburg, PA","micro",45114,16126,FALSE
+"399","42","Pennsylvania",12791181,5335524,"25420","Harrisburg-Carlisle, PA","metro",567872,277210,TRUE
+"400","42","Pennsylvania",12791181,5335524,"38300","Pittsburgh, PA","metro",2339941,1103495,TRUE
+"401","42","Pennsylvania",12791181,5335524,"20700","East Stroudsburg, PA","metro",167586,49290,FALSE
+"402","42","Pennsylvania",12791181,5335524,"11020","Altoona, PA","metro",123842,52981,FALSE
+"403","42","Pennsylvania",12791181,5335524,"27780","Johnstown, PA","metro",134550,46317,FALSE
+"404","42","Pennsylvania",12791181,5335524,"39740","Reading, PA","metro",416642,153071,FALSE
+"405","42","Pennsylvania",12791181,5335524,"26500","Huntingdon, PA","micro",45421,9874,FALSE
+"406","42","Pennsylvania",12791181,5335524,"35260","New Castle, PA","micro",87382,26205,FALSE
+"407","42","Pennsylvania",12791181,5335524,"30380","Lewistown, PA","micro",46362,14299,FALSE
+"408","42","Pennsylvania",12791181,5335524,"42780","Selinsgrove, PA","micro",40466,15949,FALSE
+"409","42","Pennsylvania",12791181,5335524,"32740","Meadville, PA","micro",86164,26962,FALSE
+"410","42","Pennsylvania",12791181,5335524,"21500","Erie, PA","metro",275972,115178,FALSE
+"411","42","Pennsylvania",12791181,5335524,"39060","Pottsville, PA","micro",143555,41324,FALSE
+"412","42","Pennsylvania",12791181,5335524,"42540","Scranton--Wilkes-Barre, PA","metro",556926,237277,TRUE
+"413","42","Pennsylvania",12791181,5335524,"23900","Gettysburg, PA","metro",102023,29070,FALSE
+"414","42","Pennsylvania",12791181,5335524,"30820","Lock Haven, PA","micro",39074,10631,FALSE
+"415","42","Pennsylvania",12791181,5335524,"10900","Allentown-Bethlehem-Easton, PA-NJ","metro",834615,331950,TRUE
+"416","42","Pennsylvania",12791181,5335524,"44300","State College, PA","metro",161443,46119,FALSE
+"417","42","Pennsylvania",12791181,5335524,"44980","Sunbury, PA","micro",92325,24647,FALSE
+"418","42","Pennsylvania",12791181,5335524,"36340","Oil City, PA","micro",52376,14835,FALSE
+"419","42","Pennsylvania",12791181,5335524,"14620","Bradford, PA","micro",41806,12195,FALSE
+"420","42","Pennsylvania",12791181,5335524,"30140","Lebanon, PA","metro",138674,46303,FALSE
+"421","42","Pennsylvania",12791181,5335524,"14100","Bloomsburg-Berwick, PA","metro",84514,36923,FALSE
+"422","42","Pennsylvania",12791181,5335524,"29540","Lancaster, PA","metro",538347,235331,FALSE
+"423","44","Rhode Island",1056611,430556,"39300","Providence-Warwick, RI-MA","metro",1615516,637255,TRUE
+"424","45","South Carolina",4955925,1694559,"12260","Augusta-Richmond County, GA-SC","metro",594300,187081,TRUE
+"425","45","South Carolina",4955925,1694559,"35140","Newberry, SC","micro",38068,11745,FALSE
+"426","45","South Carolina",4955925,1694559,"44940","Sumter, SC","metro",141012,36794,FALSE
+"427","45","South Carolina",4955925,1694559,"17900","Columbia, SC","metro",816664,295371,TRUE
+"428","45","South Carolina",4955925,1694559,"16740","Charlotte-Concord-Gastonia, NC-SC","metro",2498431,1058398,TRUE
+"429","45","South Carolina",4955925,1694559,"16700","Charleston-North Charleston, SC","metro",759247,286757,TRUE
+"430","45","South Carolina",4955925,1694559,"22500","Florence, SC","metro",205814,75608,FALSE
+"431","45","South Carolina",4955925,1694559,"23860","Georgetown, SC","micro",61605,19642,FALSE
+"432","45","South Carolina",4955925,1694559,"24860","Greenville-Anderson, SC","metro",883853,340562,TRUE
+"433","45","South Carolina",4955925,1694559,"24940","Greenwood, SC","micro",70264,22559,FALSE
+"434","45","South Carolina",4955925,1694559,"34820","Myrtle Beach-Conway-North Myrtle Beach, SC-NC","metro",447775,138378,FALSE
+"435","45","South Carolina",4955925,1694559,"36700","Orangeburg, SC","micro",88454,24888,FALSE
+"436","45","South Carolina",4955925,1694559,"46420","Union, SC","micro",27644,6917,FALSE
+"437","46","South Dakota",864289,357755,"43620","Sioux Falls, SD","metro",255438,143288,FALSE
+"438","46","South Dakota",864289,357755,"46820","Vermillion, SD","micro",13925,3606,FALSE
+"439","46","South Dakota",864289,357755,"43940","Spearfish, SD","micro",25234,9796,FALSE
+"440","46","South Dakota",864289,357755,"47980","Watertown, SD","micro",33993,14668,FALSE
+"441","46","South Dakota",864289,357755,"10100","Aberdeen, SD","micro",42780,19437,FALSE
+"442","46","South Dakota",864289,357755,"39660","Rapid City, SD","metro",136718,54904,FALSE
+"443","46","South Dakota",864289,357755,"33580","Mitchell, SD","micro",23298,10896,FALSE
+"444","46","South Dakota",864289,357755,"43580","Sioux City, IA-NE-SD","metro",143638,67718,FALSE
+"445","47","Tennessee",6651089,2566583,"34980","Nashville-Davidson--Murfreesboro--Franklin, TN","metro",1839460,855849,TRUE
+"446","47","Tennessee",6651089,2566583,"28940","Knoxville, TN","metro",845486,334884,TRUE
+"447","47","Tennessee",6651089,2566583,"17300","Clarksville, TN-KY","metro",296295,73140,FALSE
+"448","47","Tennessee",6651089,2566583,"37540","Paris, TN","micro",32279,8872,FALSE
+"449","47","Tennessee",6651089,2566583,"35460","Newport, TN","micro",35336,6078,FALSE
+"450","47","Tennessee",6651089,2566583,"27180","Jackson, TN","metro",178506,70348,FALSE
+"451","47","Tennessee",6651089,2566583,"11940","Athens, TN","micro",52773,16511,FALSE
+"452","47","Tennessee",6651089,2566583,"30280","Lewisburg, TN","micro",32269,8173,FALSE
+"453","47","Tennessee",6651089,2566583,"46460","Union City, TN","micro",30520,8832,FALSE
+"454","47","Tennessee",6651089,2566583,"19420","Dayton, TN","micro",32628,8858,FALSE
+"455","47","Tennessee",6651089,2566583,"32820","Memphis, TN-MS-AR","metro",1337738,539734,TRUE
+"456","47","Tennessee",6651089,2566583,"20540","Dyersburg, TN","micro",37576,13015,FALSE
+"457","47","Tennessee",6651089,2566583,"16860","Chattanooga, TN-GA","metro",552043,221608,TRUE
+"458","47","Tennessee",6651089,2566583,"28700","Kingsport-Bristol, TN-VA","metro",306394,104278,FALSE
+"459","47","Tennessee",6651089,2566583,"32660","McMinnville, TN","micro",40454,11020,FALSE
+"460","47","Tennessee",6651089,2566583,"27740","Johnson City, TN","metro",201226,65563,FALSE
+"461","47","Tennessee",6651089,2566583,"46100","Tullahoma-Manchester, TN","micro",102365,31692,FALSE
+"462","47","Tennessee",6651089,2566583,"29980","Lawrenceburg, TN","micro",42937,8529,FALSE
+"463","47","Tennessee",6651089,2566583,"34100","Morristown, TN","metro",140000,42419,FALSE
+"464","47","Tennessee",6651089,2566583,"18260","Cookeville, TN","micro",110059,34918,FALSE
+"465","47","Tennessee",6651089,2566583,"24620","Greeneville, TN","micro",68669,23289,FALSE
+"466","47","Tennessee",6651089,2566583,"42940","Sevierville, TN","micro",96287,40963,FALSE
+"467","47","Tennessee",6651089,2566583,"15140","Brownsville, TN","micro",17779,5172,FALSE
+"468","48","Texas",27885195,NA,"44500","Stephenville, TX","micro",41482,12432,FALSE
+"469","48","Texas",27885195,NA,"41700","San Antonio-New Braunfels, TX","metro",2426204,876237,TRUE
+"470","48","Texas",27885195,NA,"45020","Sweetwater, TX","micro",14966,4332,FALSE
+"471","48","Texas",27885195,NA,"21340","El Paso, TX","metro",841752,237730,TRUE
+"472","48","Texas",27885195,NA,"11980","Athens, TX","micro",80460,13271,FALSE
+"473","48","Texas",27885195,NA,"30980","Longview, TX","metro",284503,96956,FALSE
+"474","48","Texas",27885195,NA,"37580","Paris, TX","micro",49532,17583,FALSE
+"475","48","Texas",27885195,NA,"12420","Austin-Round Rock-Georgetown, TX","metro",2058351,836997,TRUE
+"476","48","Texas",27885195,NA,"46900","Vernon, TX","micro",12906,3387,FALSE
+"477","48","Texas",27885195,NA,"38380","Plainview, TX","micro",34113,9057,FALSE
+"478","48","Texas",27885195,NA,"48660","Wichita Falls, TX","metro",150994,46665,FALSE
+"479","48","Texas",27885195,NA,"30220","Levelland, TX","micro",23162,6574,FALSE
+"480","48","Texas",27885195,NA,"20580","Eagle Pass, TX","micro",57970,12600,FALSE
+"481","48","Texas",27885195,NA,"14300","Bonham, TX","micro",34175,5289,FALSE
+"482","48","Texas",27885195,NA,"33260","Midland, TX","metro",169808,87328,FALSE
+"483","48","Texas",27885195,NA,"17780","College Station-Bryan, TX","metro",253946,75731,FALSE
+"484","48","Texas",27885195,NA,"15180","Brownsville-Harlingen, TX","metro",421750,107239,FALSE
+"485","48","Texas",27885195,NA,"19100","Dallas-Fort Worth-Arlington, TX","metro",7189384,3127419,TRUE
+"486","48","Texas",27885195,NA,"14780","Brenham, TX","micro",34796,12347,FALSE
+"487","48","Texas",27885195,NA,"11380","Andrews, TX","micro",17818,5305,FALSE
+"488","48","Texas",27885195,NA,"23240","Fredericksburg, TX","micro",26208,9635,FALSE
+"489","48","Texas",27885195,NA,"49820","Zapata, TX","micro",14369,1457,FALSE
+"490","48","Texas",27885195,NA,"24180","Granbury, TX","micro",56901,13071,FALSE
+"491","48","Texas",27885195,NA,"44860","Sulphur Springs, TX","micro",36240,10254,FALSE
+"492","48","Texas",27885195,NA,"47380","Waco, TX","metro",265728,105047,FALSE
+"493","48","Texas",27885195,NA,"27380","Jacksonville, TX","micro",51903,11226,FALSE
+"494","48","Texas",27885195,NA,"10180","Abilene, TX","metro",170009,58400,FALSE
+"495","48","Texas",27885195,NA,"37780","Pecos, TX","micro",15227,3925,FALSE
+"496","48","Texas",27885195,NA,"34420","Mount Pleasant, TX","micro",45543,16020,FALSE
+"497","48","Texas",27885195,NA,"34860","Nacogdoches, TX","micro",65558,17883,FALSE
+"498","48","Texas",27885195,NA,"19620","Del Rio, TX","micro",49027,10972,FALSE
+"499","48","Texas",27885195,NA,"36220","Odessa, TX","metro",158342,59190,FALSE
+"500","48","Texas",27885195,NA,"31260","Lufkin, TX","micro",87607,28296,FALSE
+"501","48","Texas",27885195,NA,"13060","Bay City, TX","micro",36743,8059,FALSE
+"502","48","Texas",27885195,NA,"26660","Huntsville, TX","micro",71539,12364,FALSE
+"503","48","Texas",27885195,NA,"40530","Rockport, TX","micro",24763,4387,FALSE
+"504","48","Texas",27885195,NA,"28660","Killeen-Temple, TX","metro",438265,106123,FALSE
+"505","48","Texas",27885195,NA,"20300","Dumas, TX","micro",21801,7918,FALSE
+"506","48","Texas",27885195,NA,"18620","Corsicana, TX","micro",48583,13770,FALSE
+"507","48","Texas",27885195,NA,"40100","Rio Grande City-Roma, TX","micro",63894,8656,FALSE
+"508","48","Texas",27885195,NA,"37770","Pearsall, TX","micro",19394,5079,FALSE
+"509","48","Texas",27885195,NA,"37300","Palestine, TX","micro",57863,11976,FALSE
+"510","19","Iowa",3132499,1321996,"15460","Burlington, IA-IL","micro",46484,20893,FALSE
+"511","19","Iowa",3132499,1321996,"36540","Omaha-Council Bluffs, NE-IA","metro",922891,419890,TRUE
+"512","19","Iowa",3132499,1321996,"34700","Muscatine, IA","micro",42950,21173,FALSE
+"513","19","Iowa",3132499,1321996,"19780","Des Moines-West Des Moines, IA","metro",671092,329004,TRUE
+"514","19","Iowa",3132499,1321996,"22700","Fort Dodge, IA","micro",36757,16242,FALSE
+"515","19","Iowa",3132499,1321996,"11180","Ames, IA","metro",123321,38790,FALSE
+"516","19","Iowa",3132499,1321996,"43580","Sioux City, IA-NE-SD","metro",143638,67718,FALSE
+"517","19","Iowa",3132499,1321996,"47940","Waterloo-Cedar Falls, IA","metro",170132,75798,FALSE
+"518","19","Iowa",3132499,1321996,"16300","Cedar Rapids, IA","metro",268315,129218,FALSE
+"519","19","Iowa",3132499,1321996,"22800","Fort Madison-Keokuk, IA-IL-MO","micro",59453,18293,FALSE
+"520","19","Iowa",3132499,1321996,"43980","Spencer, IA","micro",16313,7419,FALSE
+"521","19","Iowa",3132499,1321996,"17540","Clinton, IA","micro",47218,17831,FALSE
+"522","20","Kansas",2908776,1163105,"48620","Wichita, KS","metro",636295,261264,TRUE
+"523","20","Kansas",2908776,1163105,"31740","Manhattan, KS","metro",133736,38483,FALSE
+"524","20","Kansas",2908776,1163105,"45820","Topeka, KS","metro",233260,85514,FALSE
+"525","20","Kansas",2908776,1163105,"17700","Coffeyville, KS","micro",32970,12385,FALSE
+"526","20","Kansas",2908776,1163105,"21380","Emporia, KS","micro",35944,12204,FALSE
+"527","20","Kansas",2908776,1163105,"23780","Garden City, KS","micro",40889,16038,FALSE
+"528","20","Kansas",2908776,1163105,"32700","McPherson, KS","micro",28630,13627,FALSE
+"529","20","Kansas",2908776,1163105,"38260","Pittsburg, KS","micro",39108,14944,FALSE
+"530","20","Kansas",2908776,1163105,"25700","Hays, KS","micro",28878,12425,FALSE
+"531","20","Kansas",2908776,1163105,"37660","Parsons, KS","micro",20367,7580,FALSE
+"532","20","Kansas",2908776,1163105,"28140","Kansas City, MO-KS","metro",2106632,954263,TRUE
+"533","20","Kansas",2908776,1163105,"30580","Liberal, KS","micro",22692,8556,FALSE
+"534","20","Kansas",2908776,1163105,"29940","Lawrence, KS","metro",119319,40467,FALSE
+"535","20","Kansas",2908776,1163105,"26740","Hutchinson, KS","micro",63101,22381,FALSE
+"536","20","Kansas",2908776,1163105,"41140","St. Joseph, MO-KS","metro",126779,48854,FALSE
+"537","21","Kentucky",4440204,1587564,"14540","Bowling Green, KY","metro",172088,61626,FALSE
+"538","21","Kentucky",4440204,1587564,"17140","Cincinnati, OH-KY-IN","metro",2191667,946308,TRUE
+"539","21","Kentucky",4440204,1587564,"31140","Louisville/Jefferson County, KY-IN","metro",1252890,577816,TRUE
+"540","21","Kentucky",4440204,1587564,"21060","Elizabethtown-Fort Knox, KY","metro",150577,42854,FALSE
+"541","21","Kentucky",4440204,1587564,"32500","Maysville, KY","micro",17153,6837,FALSE
+"542","21","Kentucky",4440204,1587564,"37140","Paducah, KY-IL","micro",97067,41968,FALSE
+"543","21","Kentucky",4440204,1587564,"23980","Glasgow, KY","micro",53684,16314,FALSE
+"544","21","Kentucky",4440204,1587564,"15820","Campbellsville, KY","micro",36523,10838,FALSE
+"545","21","Kentucky",4440204,1587564,"36980","Owensboro, KY","metro",117987,47181,FALSE
+"546","21","Kentucky",4440204,1587564,"17300","Clarksville, TN-KY","metro",296295,73140,FALSE
+"547","21","Kentucky",4440204,1587564,"31580","Madisonville, KY","micro",45664,14335,FALSE
+"548","21","Kentucky",4440204,1587564,"30940","London, KY","micro",148357,45090,FALSE
+"549","21","Kentucky",4440204,1587564,"34460","Mount Sterling, KY","micro",46432,11935,FALSE
+"550","21","Kentucky",4440204,1587564,"30460","Lexington-Fayette, KY","metro",506786,228183,FALSE
+"551","21","Kentucky",4440204,1587564,"26580","Huntington-Ashland, WV-KY-OH","metro",364446,114510,FALSE
+"552","21","Kentucky",4440204,1587564,"33180","Middlesborough, KY","micro",27188,6896,FALSE
+"553","21","Kentucky",4440204,1587564,"32460","Mayfield, KY","micro",37294,9934,FALSE
+"554","21","Kentucky",4440204,1587564,"23180","Frankfort, KY","micro",72510,20347,FALSE
+"555","21","Kentucky",4440204,1587564,"40080","Richmond-Berea, KY","micro",104013,24849,FALSE
+"556","22","Louisiana",4663616,1637381,"29180","Lafayette, LA","metro",488969,180677,FALSE
+"557","22","Louisiana",4663616,1637381,"35380","New Orleans-Metairie, LA","metro",1263635,494676,TRUE
+"558","22","Louisiana",4663616,1637381,"35020","Natchez, MS-LA","micro",51568,13927,FALSE
+"559","22","Louisiana",4663616,1637381,"10780","Alexandria, LA","metro",153894,47260,FALSE
+"560","22","Louisiana",4663616,1637381,"43340","Shreveport-Bossier City, LA","metro",401708,140406,FALSE
+"561","22","Louisiana",4663616,1637381,"29340","Lake Charles, LA","metro",207050,79000,FALSE
+"562","22","Louisiana",4663616,1637381,"12940","Baton Rouge, LA","metro",852356,346458,TRUE
+"563","22","Louisiana",4663616,1637381,"33740","Monroe, LA","metro",204542,72184,FALSE
+"564","22","Louisiana",4663616,1637381,"14220","Bogalusa, LA","micro",46457,9002,FALSE
+"565","22","Louisiana",4663616,1637381,"36660","Opelousas, LA","micro",83449,22071,FALSE
+"566","22","Louisiana",4663616,1637381,"25220","Hammond, LA","metro",130504,36408,FALSE
+"567","22","Louisiana",4663616,1637381,"34020","Morgan City, LA","micro",51734,18621,FALSE
+"568","22","Louisiana",4663616,1637381,"35060","Natchitoches, LA","micro",38963,11048,FALSE
+"569","23","Maine",1332813,509789,"12620","Bangor, ME","metro",151748,56958,FALSE
+"570","23","Maine",1332813,509789,"30340","Lewiston-Auburn, ME","metro",107444,45507,FALSE
+"571","23","Maine",1332813,509789,"38860","Portland-South Portland, ME","metro",529323,238275,FALSE
+"572","24","Maryland",6003435,2281854,"41540","Salisbury, MD-DE","metro",399013,128997,FALSE
+"573","24","Maryland",6003435,2281854,"12580","Baltimore-Columbia-Towson, MD","metro",2793250,1181547,TRUE
+"574","24","Maryland",6003435,2281854,"20660","Easton, MD","micro",37211,17975,FALSE
+"575","24","Maryland",6003435,2281854,"47900","Washington-Arlington-Alexandria, DC-VA-MD-WV","metro",6151521,2676308,TRUE
+"576","24","Maryland",6003435,2281854,"15680","California-Lexington Park, MD","metro",111531,32376,FALSE
+"577","24","Maryland",6003435,2281854,"15700","Cambridge, MD","micro",32261,9781,FALSE
+"578","24","Maryland",6003435,2281854,"25180","Hagerstown-Martinsburg, MD-WV","metro",280930,87342,FALSE
+"579","24","Maryland",6003435,2281854,"37980","Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","metro",6069448,2628893,TRUE
+"580","25","Massachusetts",6830193,3250471,"14460","Boston-Cambridge-Newton, MA-NH","metro",4811732,2534539,TRUE
+"581","25","Massachusetts",6830193,3250471,"12700","Barnstable Town, MA","metro",213690,78050,FALSE
+"582","25","Massachusetts",6830193,3250471,"47240","Vineyard Haven, MA","micro",17313,5693,FALSE
+"583","25","Massachusetts",6830193,3250471,"38340","Pittsfield, MA","metro",127328,53882,FALSE
+"584","25","Massachusetts",6830193,3250471,"39300","Providence-Warwick, RI-MA","metro",1615516,637255,TRUE
+"585","25","Massachusetts",6830193,3250471,"44140","Springfield, MA","metro",701210,242907,TRUE
+"586","26","Michigan",9957488,3724511,"33780","Monroe, MI","metro",149699,37086,FALSE
+"587","26","Michigan",9957488,3724511,"26090","Holland, MI","micro",115250,38008,FALSE
+"588","26","Michigan",9957488,3724511,"25880","Hillsdale, MI","micro",45830,10870,FALSE
+"589","26","Michigan",9957488,3724511,"45900","Traverse City, MI","micro",148400,57340,FALSE
+"590","26","Michigan",9957488,3724511,"26340","Houghton, MI","micro",38490,9590,FALSE
+"591","26","Michigan",9957488,3724511,"34380","Mount Pleasant, MI","micro",70775,25024,FALSE
+"592","26","Michigan",9957488,3724511,"24340","Grand Rapids-Kentwood, MI","metro",1054559,503115,TRUE
+"593","26","Michigan",9957488,3724511,"10980","Alpena, MI","micro",28612,10198,FALSE
+"594","26","Michigan",9957488,3724511,"33220","Midland, MI","metro",83389,36436,FALSE
+"595","26","Michigan",9957488,3724511,"35660","Niles, MI","metro",154807,54568,FALSE
+"596","26","Michigan",9957488,3724511,"29620","Lansing-East Lansing, MI","metro",545108,183895,FALSE
+"597","26","Michigan",9957488,3724511,"10940","Alma, MI","micro",41067,11280,FALSE
+"598","26","Michigan",9957488,3724511,"10300","Adrian, MI","micro",98474,22800,FALSE
+"599","26","Michigan",9957488,3724511,"31220","Ludington, MI","micro",28884,9199,FALSE
+"600","26","Michigan",9957488,3724511,"44780","Sturgis, MI","micro",60897,19962,FALSE
+"601","26","Michigan",9957488,3724511,"19820","Detroit-Warren-Dearborn, MI","metro",4317179,1761974,TRUE
+"602","26","Michigan",9957488,3724511,"11460","Ann Arbor, MI","metro",365961,152087,FALSE
+"603","26","Michigan",9957488,3724511,"43780","South Bend-Mishawaka, IN-MI","metro",320700,129862,FALSE
+"604","26","Michigan",9957488,3724511,"17740","Coldwater, MI","micro",43584,11391,FALSE
+"605","26","Michigan",9957488,3724511,"27100","Jackson, MI","metro",158913,50191,FALSE
+"606","26","Michigan",9957488,3724511,"28020","Kalamazoo-Portage, MI","metro",261573,109826,FALSE
+"607","26","Michigan",9957488,3724511,"13660","Big Rapids, MI","micro",43264,9851,FALSE
+"608","26","Michigan",9957488,3724511,"32100","Marquette, MI","micro",66939,21170,FALSE
+"609","26","Michigan",9957488,3724511,"12980","Battle Creek, MI","metro",134473,53335,FALSE
+"610","26","Michigan",9957488,3724511,"13020","Bay City, MI","metro",104786,29870,FALSE
+"611","26","Michigan",9957488,3724511,"40980","Saginaw, MI","metro",192778,80324,FALSE
+"612","26","Michigan",9957488,3724511,"21540","Escanaba, MI","micro",36190,11754,FALSE
+"613","05","Arkansas",2990671,1008950,"12900","Batesville, AR","micro",54307,16847,FALSE
+"614","05","Arkansas",2990671,1008950,"34260","Mountain Home, AR","micro",41219,13318,FALSE
+"615","05","Arkansas",2990671,1008950,"27860","Jonesboro, AR","metro",129755,46190,FALSE
+"616","05","Arkansas",2990671,1008950,"37500","Paragould, AR","micro",44623,14954,FALSE
+"617","05","Arkansas",2990671,1008950,"25760","Helena-West Helena, AR","micro",19034,4036,FALSE
+"618","05","Arkansas",2990671,1008950,"15780","Camden, AR","micro",29308,8175,FALSE
+"619","05","Arkansas",2990671,1008950,"11660","Arkadelphia, AR","micro",22385,6906,FALSE
+"620","05","Arkansas",2990671,1008950,"25460","Harrison, AR","micro",45136,13213,FALSE
+"621","05","Arkansas",2990671,1008950,"45500","Texarkana, TX-AR","metro",150034,48004,FALSE
+"622","06","California",39148760,14131235,"17340","Clearlake, CA","micro",64148,9800,FALSE
+"623","06","California",39148760,14131235,"49700","Yuba City, CA","metro",171365,32176,FALSE
+"624","06","California",39148760,14131235,"41860","San Francisco-Oakland-Berkeley, CA","metro",4673221,2167508,TRUE
+"625","06","California",39148760,14131235,"45000","Susanville, CA","micro",31185,3560,FALSE
+"626","06","California",39148760,14131235,"42200","Santa Maria-Santa Barbara, CA","metro",443738,149750,FALSE
+"627","06","California",39148760,14131235,"42220","Santa Rosa-Petaluma, CA","metro",501317,173035,FALSE
+"628","06","California",39148760,14131235,"20940","El Centro, CA","metro",180216,32109,FALSE
+"629","06","California",39148760,14131235,"40900","Sacramento-Roseville-Folsom, CA","metro",2291738,743106,TRUE
+"630","06","California",39148760,14131235,"34900","Napa, CA","metro",140530,64132,FALSE
+"631","06","California",39148760,14131235,"41500","Salinas, CA","metro",433212,113209,FALSE
+"632","06","California",39148760,14131235,"41740","San Diego-Chula Vista-Carlsbad, CA","metro",3302833,1266620,TRUE
+"633","06","California",39148760,14131235,"21700","Eureka-Arcata, CA","micro",135768,34987,FALSE
+"634","06","California",39148760,14131235,"46380","Ukiah, CA","micro",87422,23672,FALSE
+"635","06","California",39148760,14131235,"42100","Santa Cruz-Watsonville, CA","metro",273765,79038,FALSE
+"636","06","California",39148760,14131235,"31080","Los Angeles-Long Beach-Anaheim, CA","metro",13262234,5324257,TRUE
+"637","06","California",39148760,14131235,"40140","Riverside-San Bernardino-Ontario, CA","metro",4518699,1179496,TRUE
+"638","06","California",39148760,14131235,"41940","San Jose-Sunnyvale-Santa Clara, CA","metro",1981616,1068403,TRUE
+"639","06","California",39148760,14131235,"39820","Redding, CA","metro",179085,50261,FALSE
+"640","06","California",39148760,14131235,"18860","Crescent City, CA","micro",27424,4051,FALSE
+"641","06","California",39148760,14131235,"42020","San Luis Obispo-Paso Robles, CA","metro",281455,91732,FALSE
+"642","06","California",39148760,14131235,"17020","Chico, CA","metro",227075,62600,FALSE
+"643","06","California",39148760,14131235,"12540","Bakersfield, CA","metro",883053,189762,TRUE
+"644","06","California",39148760,14131235,"43760","Sonora, CA","micro",53932,12834,FALSE
+"645","06","California",39148760,14131235,"44700","Stockton, CA","metro",732212,190958,TRUE
+"646","08","Colorado",5531141,2246250,"19740","Denver-Aurora-Lakewood, CO","metro",2850221,1280402,TRUE
+"647","08","Colorado",5531141,2246250,"24060","Glenwood Springs, CO","micro",76447,37322,FALSE
+"648","08","Colorado",5531141,2246250,"33940","Montrose, CO","micro",45990,13741,FALSE
+"649","08","Colorado",5531141,2246250,"20780","Edwards, CO","micro",54357,32636,FALSE
+"650","08","Colorado",5531141,2246250,"18780","Craig, CO","micro",13060,3235,FALSE
+"651","08","Colorado",5531141,2246250,"22660","Fort Collins, CO","metro",338161,126470,FALSE
+"652","08","Colorado",5531141,2246250,"14500","Boulder, CO","metro",321030,153690,FALSE
+"653","08","Colorado",5531141,2246250,"44460","Steamboat Springs, CO","micro",24874,14494,FALSE
+"654","08","Colorado",5531141,2246250,"14720","Breckenridge, CO","micro",30429,21720,FALSE
+"655","08","Colorado",5531141,2246250,"39380","Pueblo, CO","metro",164685,50879,FALSE
+"656","08","Colorado",5531141,2246250,"22820","Fort Morgan, CO","micro",28257,9501,FALSE
+"657","08","Colorado",5531141,2246250,"24300","Grand Junction, CO","metro",149998,52848,FALSE
+"658","08","Colorado",5531141,2246250,"17820","Colorado Springs, CO","metro",712266,248023,TRUE
+"659","09","Connecticut",3581504,1507555,"35300","New Haven-Milford, CT","metro",859339,340724,TRUE
+"660","09","Connecticut",3581504,1507555,"25540","Hartford-East Hartford-Middletown, CT","metro",1209367,549925,TRUE
+"661","09","Connecticut",3581504,1507555,"49340","Worcester, MA-CT","metro",938818,337022,TRUE
+"662","10","Delaware",949495,391167,"37980","Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","metro",6069448,2628893,TRUE
+"663","10","Delaware",949495,391167,"41540","Salisbury, MD-DE","metro",399013,128997,FALSE
+"664","11","District of Columbia",684498,527004,"47900","Washington-Arlington-Alexandria, DC-VA-MD-WV","metro",6151521,2676308,TRUE
+"665","12","Florida",20598139,7103944,"18880","Crestview-Fort Walton Beach-Destin, FL","metro",266595,82799,FALSE
+"666","12","Florida",20598139,7103944,"27260","Jacksonville, FL","metro",1475386,577874,TRUE
+"667","12","Florida",20598139,7103944,"37340","Palm Bay-Melbourne-Titusville, FL","metro",576808,185134,TRUE
+"668","12","Florida",20598139,7103944,"36740","Orlando-Kissimmee-Sanford, FL","metro",2450261,1072635,TRUE
+"669","12","Florida",20598139,7103944,"45300","Tampa-St. Petersburg-Clearwater, FL","metro",3030047,1120203,TRUE
+"670","12","Florida",20598139,7103944,"29460","Lakeland-Winter Haven, FL","metro",668671,182922,TRUE
+"671","12","Florida",20598139,7103944,"38940","Port St. Lucie, FL","metro",463172,117217,FALSE
+"672","12","Florida",20598139,7103944,"17500","Clewiston, FL","micro",40127,6416,FALSE
+"673","12","Florida",20598139,7103944,"42680","Sebastian-Vero Beach, FL","metro",150984,45434,FALSE
+"674","12","Florida",20598139,7103944,"33100","Miami-Fort Lauderdale-Pompano Beach, FL","metro",6070944,2214596,TRUE
+"675","12","Florida",20598139,7103944,"37460","Panama City, FL","metro",182482,63126,FALSE
+"676","12","Florida",20598139,7103944,"19660","Deltona-Daytona Beach-Ormond Beach, FL","metro",634773,168368,TRUE
+"677","12","Florida",20598139,7103944,"45540","The Villages, FL","metro",120999,22470,FALSE
+"678","12","Florida",20598139,7103944,"45220","Tallahassee, FL","metro",380101,110687,FALSE
+"679","12","Florida",20598139,7103944,"15980","Cape Coral-Fort Myers, FL","metro",718679,216916,TRUE
+"680","12","Florida",20598139,7103944,"36100","Ocala, FL","metro",348371,81985,FALSE
+"681","12","Florida",20598139,7103944,"34940","Naples-Marco Island, FL","metro",363922,131871,FALSE
+"682","12","Florida",20598139,7103944,"42700","Sebring-Avon Park, FL","metro",102101,20766,FALSE
+"683","12","Florida",20598139,7103944,"11580","Arcadia, FL","micro",36399,5606,FALSE
+"684","12","Florida",20598139,7103944,"29380","Lake City, FL","micro",69105,18651,FALSE
+"685","12","Florida",20598139,7103944,"37260","Palatka, FL","micro",72766,12373,FALSE
+"686","12","Florida",20598139,7103944,"35840","North Port-Sarasota-Bradenton, FL","metro",785997,247805,TRUE
+"687","12","Florida",20598139,7103944,"23540","Gainesville, FL","metro",320724,102732,FALSE
+"688","12","Florida",20598139,7103944,"37860","Pensacola-Ferry Pass-Brent, FL","metro",481964,133544,FALSE
+"689","13","Georgia",10297484,3703227,"31420","Macon-Bibb County, GA","metro",229676,84303,FALSE
+"690","13","Georgia",10297484,3703227,"17980","Columbus, GA-AL","metro",320144,99653,FALSE
+"691","13","Georgia",10297484,3703227,"11140","Americus, GA","micro",35563,9394,FALSE
+"692","13","Georgia",10297484,3703227,"42340","Savannah, GA","metro",381623,151691,FALSE
+"693","13","Georgia",10297484,3703227,"12060","Atlanta-Sandy Springs-Alpharetta, GA","metro",5779463,2352106,TRUE
+"694","13","Georgia",10297484,3703227,"21640","Eufaula, AL-GA","micro",28058,7067,FALSE
+"695","13","Georgia",10297484,3703227,"20140","Dublin, GA","micro",63925,16457,FALSE
+"696","13","Georgia",10297484,3703227,"25980","Hinesville, GA","metro",80264,12320,FALSE
+"697","13","Georgia",10297484,3703227,"45700","Tifton, GA","micro",40510,16271,FALSE
+"698","13","Georgia",10297484,3703227,"16340","Cedartown, GA","micro",41621,10099,FALSE
+"699","13","Georgia",10297484,3703227,"10500","Albany, GA","metro",149912,46015,FALSE
+"700","13","Georgia",10297484,3703227,"45620","Thomasville, GA","micro",44730,16659,FALSE
+"701","13","Georgia",10297484,3703227,"47080","Vidalia, GA","micro",36084,10288,FALSE
+"702","13","Georgia",10297484,3703227,"22340","Fitzgerald, GA","micro",17154,4740,FALSE
+"703","13","Georgia",10297484,3703227,"12260","Augusta-Richmond County, GA-SC","metro",594300,187081,TRUE
+"704","13","Georgia",10297484,3703227,"16860","Chattanooga, TN-GA","metro",552043,221608,TRUE
+"705","13","Georgia",10297484,3703227,"44900","Summerville, GA","micro",24817,4984,FALSE
+"706","13","Georgia",10297484,3703227,"12460","Bainbridge, GA","micro",26833,6268,FALSE
+"707","13","Georgia",10297484,3703227,"40660","Rome, GA","metro",96824,36648,FALSE
+"708","13","Georgia",10297484,3703227,"18460","Cornelia, GA","micro",44289,11938,FALSE
+"709","13","Georgia",10297484,3703227,"46660","Valdosta, GA","metro",144564,44264,FALSE
+"710","13","Georgia",10297484,3703227,"18380","Cordele, GA","micro",22846,6867,FALSE
+"711","13","Georgia",10297484,3703227,"34220","Moultrie, GA","micro",45606,11298,FALSE
+"712","13","Georgia",10297484,3703227,"23580","Gainesville, GA","metro",195961,77461,FALSE
+"713","13","Georgia",10297484,3703227,"33300","Milledgeville, GA","micro",53821,13456,FALSE
+"714","13","Georgia",10297484,3703227,"47580","Warner Robins, GA","metro",178648,45297,FALSE
+"715","13","Georgia",10297484,3703227,"12020","Athens-Clarke County, GA","metro",205303,65041,FALSE
+"716","13","Georgia",10297484,3703227,"48180","Waycross, GA","micro",54763,14818,FALSE
+"717","13","Georgia",10297484,3703227,"27700","Jesup, GA","micro",29767,5877,FALSE
+"718","13","Georgia",10297484,3703227,"44340","Statesboro, GA","micro",74782,17780,FALSE
+"719","13","Georgia",10297484,3703227,"15260","Brunswick, GA","metro",116655,35077,FALSE
+"720","13","Georgia",10297484,3703227,"19140","Dalton, GA","metro",143406,55284,FALSE
+"721","13","Georgia",10297484,3703227,"20060","Douglas, GA","micro",51226,14659,FALSE
+"722","16","Idaho",1687809,564949,"15420","Burley, ID","micro",44230,12820,FALSE
+"723","16","Idaho",1687809,564949,"14260","Boise City, ID","metro",693952,254357,TRUE
+"724","16","Idaho",1687809,564949,"30300","Lewiston, ID-WA","metro",62492,22882,FALSE
+"725","16","Idaho",1687809,564949,"17660","Coeur d'Alene, ID","metro",153605,52930,FALSE
+"726","16","Idaho",1687809,564949,"26820","Idaho Falls, ID","metro",142968,54007,FALSE
+"727","16","Idaho",1687809,564949,"46300","Twin Falls, ID","metro",107097,37498,FALSE
+"728","16","Idaho",1687809,564949,"38540","Pocatello, ID","metro",92778,26946,FALSE
+"729","16","Idaho",1687809,564949,"13940","Blackfoot, ID","micro",45551,9788,FALSE
+"730","16","Idaho",1687809,564949,"25200","Hailey, ID","micro",22880,11663,FALSE
+"731","16","Idaho",1687809,564949,"34140","Moscow, ID","micro",39239,8947,FALSE
+"732","16","Idaho",1687809,564949,"36620","Ontario, OR-ID","micro",53472,13899,FALSE
+"733","16","Idaho",1687809,564949,"34300","Mountain Home, ID","micro",26433,3997,FALSE
+"734","16","Idaho",1687809,564949,"39940","Rexburg, ID","micro",51670,20138,FALSE
+"735","15","Hawaii",1422029,NA,"25900","Hilo, HI","micro",197658,55257,FALSE
+"736","15","Hawaii",1422029,NA,"27980","Kahului-Wailuku-Lahaina, HI","metro",165281,64947,FALSE
+"737","15","Hawaii",1422029,NA,"28180","Kapaa, HI","micro",71377,28339,FALSE
+"738","17","Illinois",12821497,5269763,"41180","St. Louis, MO-IL","metro",2805551,1249653,TRUE
+"739","17","Illinois",12821497,5269763,"36837","Ottawa, IL","micro",149528,48397,FALSE
+"740","17","Illinois",12821497,5269763,"19940","Dixon, IL","micro",34527,10830,FALSE
+"741","17","Illinois",12821497,5269763,"30660","Lincoln, IL","micro",29207,7412,FALSE
+"742","17","Illinois",12821497,5269763,"44580","Sterling, IL","micro",56396,17538,FALSE
+"743","17","Illinois",12821497,5269763,"39500","Quincy, IL-MO","micro",76454,33402,FALSE
+"744","17","Illinois",12821497,5269763,"16980","Chicago-Naperville-Elgin, IL-IN-WI","metro",9536428,4165528,TRUE
+"745","17","Illinois",12821497,5269763,"34500","Mount Vernon, IL","micro",38169,17911,FALSE
+"746","17","Illinois",12821497,5269763,"16060","Carbondale-Marion, IL","metro",138452,43560,FALSE
+"747","17","Illinois",12821497,5269763,"37900","Peoria, IL","metro",409844,163411,FALSE
+"748","17","Illinois",12821497,5269763,"19340","Davenport-Moline-Rock Island, IA-IL","metro",382720,157879,FALSE
+"749","17","Illinois",12821497,5269763,"23660","Galesburg, IL","micro",50999,15719,FALSE
+"750","17","Illinois",12821497,5269763,"37140","Paducah, KY-IL","micro",97067,41968,FALSE
+"751","17","Illinois",12821497,5269763,"27300","Jacksonville, IL","micro",39473,14225,FALSE
+"752","17","Illinois",12821497,5269763,"22800","Fort Madison-Keokuk, IA-IL-MO","micro",59453,18293,FALSE
+"753","17","Illinois",12821497,5269763,"28100","Kankakee, IL","metro",111061,36747,FALSE
+"754","17","Illinois",12821497,5269763,"44100","Springfield, IL","metro",210028,85368,FALSE
+"755","17","Illinois",12821497,5269763,"23300","Freeport, IL","micro",45433,14785,FALSE
+"756","17","Illinois",12821497,5269763,"40300","Rochelle, IL","micro",51328,13785,FALSE
+"757","17","Illinois",12821497,5269763,"15460","Burlington, IA-IL","micro",46484,20893,FALSE
+"758","17","Illinois",12821497,5269763,"14010","Bloomington, IL","metro",173219,71642,FALSE
+"759","17","Illinois",12821497,5269763,"16660","Charleston-Mattoon, IL","micro",62601,21131,FALSE
+"760","17","Illinois",12821497,5269763,"45380","Taylorville, IL","micro",33231,8466,FALSE
+"761","17","Illinois",12821497,5269763,"40420","Rockford, IL","metro",339780,134942,FALSE
+"762","17","Illinois",12821497,5269763,"16580","Champaign-Urbana, IL","metro",225875,71668,FALSE
+"763","18","Indiana",6637426,2683857,"14020","Bloomington, IN","metro",166281,53709,FALSE
+"764","18","Indiana",6637426,2683857,"21140","Elkhart-Goshen, IN","metro",203604,132095,FALSE
+"765","18","Indiana",6637426,2683857,"30900","Logansport, IN","micro",38084,12548,FALSE
+"766","18","Indiana",6637426,2683857,"26900","Indianapolis-Carmel-Anderson, IN","metro",2007497,911388,TRUE
+"767","18","Indiana",6637426,2683857,"45460","Terre Haute, IN","metro",187309,59212,FALSE
+"768","18","Indiana",6637426,2683857,"17140","Cincinnati, OH-KY-IN","metro",2191667,946308,TRUE
+"769","18","Indiana",6637426,2683857,"31980","Marion, IN","micro",66944,28449,FALSE
+"770","18","Indiana",6637426,2683857,"42980","Seymour, IN","micro",43938,20445,FALSE
+"771","18","Indiana",6637426,2683857,"29020","Kokomo, IN","metro",82387,31996,FALSE
+"772","18","Indiana",6637426,2683857,"23060","Fort Wayne, IN","metro",403665,189684,FALSE
+"773","18","Indiana",6637426,2683857,"23140","Frankfort, IN","micro",32301,10232,FALSE
+"774","18","Indiana",6637426,2683857,"13260","Bedford, IN","micro",45619,12119,FALSE
+"775","18","Indiana",6637426,2683857,"47780","Washington, IN","micro",32937,10760,FALSE
+"776","18","Indiana",6637426,2683857,"47180","Vincennes, IN","micro",37409,14541,FALSE
+"777","18","Indiana",6637426,2683857,"21780","Evansville, IN-KY","metro",314967,144467,FALSE
+"778","18","Indiana",6637426,2683857,"29200","Lafayette-West Lafayette, IN","metro",226202,77501,FALSE
+"779","18","Indiana",6637426,2683857,"24700","Greensburg, IN","micro",26552,12243,FALSE
+"780","18","Indiana",6637426,2683857,"31140","Louisville/Jefferson County, KY-IN","metro",1252890,577816,TRUE
+"781","18","Indiana",6637426,2683857,"35860","North Vernon, IN","micro",27727,6189,FALSE
+"782","18","Indiana",6637426,2683857,"47700","Warsaw, IN","micro",78806,37609,FALSE
+"783","18","Indiana",6637426,2683857,"38500","Plymouth, IN","micro",46595,17378,FALSE
+"784","18","Indiana",6637426,2683857,"42500","Scottsburg, IN","micro",23743,6715,FALSE
+"785","18","Indiana",6637426,2683857,"33140","Michigan City-La Porte, IN","metro",110552,35742,FALSE
+"786","18","Indiana",6637426,2683857,"47340","Wabash, IN","micro",31631,11017,FALSE
+"787","18","Indiana",6637426,2683857,"16980","Chicago-Naperville-Elgin, IL-IN-WI","metro",9536428,4165528,TRUE
+"788","18","Indiana",6637426,2683857,"12140","Auburn, IN","micro",42704,22549,FALSE
+"789","18","Indiana",6637426,2683857,"18020","Columbus, IN","metro",81893,48314,FALSE
+"790","18","Indiana",6637426,2683857,"18820","Crawfordsville, IN","micro",38276,13051,FALSE
+"791","18","Indiana",6637426,2683857,"28340","Kendallville, IN","micro",47451,15711,FALSE
+"792","18","Indiana",6637426,2683857,"19540","Decatur, IN","micro",35195,12184,FALSE
+"793","18","Indiana",6637426,2683857,"18220","Connersville, IN","micro",23259,5521,FALSE
+"794","19","Iowa",3132499,1321996,"19340","Davenport-Moline-Rock Island, IA-IL","metro",382720,157879,FALSE
+"795","19","Iowa",3132499,1321996,"20220","Dubuque, IA","metro",96802,54767,FALSE
+"796","19","Iowa",3132499,1321996,"36900","Ottumwa, IA","micro",35315,13975,FALSE
+"797","19","Iowa",3132499,1321996,"32380","Mason City, IA","micro",50473,21652,FALSE
+"798","19","Iowa",3132499,1321996,"32260","Marshalltown, IA","micro",40271,13748,FALSE
+"799","19","Iowa",3132499,1321996,"37800","Pella, IA","micro",33207,15902,FALSE
+"800","39","Ohio",11641879,4665959,"49780","Zanesville, OH","micro",86076,28389,FALSE
+"801","27","Minnesota",5527358,2606488,"32140","Marshall, MN","micro",25839,12547,FALSE
+"802","27","Minnesota",5527358,2606488,"47420","Wahpeton, ND-MN","micro",22631,7532,FALSE
+"803","27","Minnesota",5527358,2606488,"22020","Fargo, ND-MN","metro",237003,122574,FALSE
+"804","27","Minnesota",5527358,2606488,"24220","Grand Forks, ND-MN","metro",101991,42714,FALSE
+"805","27","Minnesota",5527358,2606488,"39860","Red Wing, MN","micro",46217,20600,FALSE
+"806","27","Minnesota",5527358,2606488,"49380","Worthington, MN","micro",21839,8731,FALSE
+"807","27","Minnesota",5527358,2606488,"24330","Grand Rapids, MN","micro",45203,12984,FALSE
+"808","27","Minnesota",5527358,2606488,"49100","Winona, MN","micro",50847,21363,FALSE
+"809","48","Texas",27885195,NA,"23620","Gainesville, TX","micro",39571,12782,FALSE
+"810","48","Texas",27885195,NA,"29500","Lamesa, TX","micro",12964,2585,FALSE
+"811","48","Texas",27885195,NA,"46620","Uvalde, TX","micro",27009,7059,FALSE
+"812","48","Texas",27885195,NA,"32580","McAllen-Edinburg-Mission, TX","metro",849389,198978,TRUE
+"813","50","Vermont",624977,256833,"13540","Bennington, VT","micro",35920,15125,FALSE
+"814","54","West Virginia",1829054,541036,"38580","Point Pleasant, WV-OH","micro",57134,13740,FALSE
+"815","54","West Virginia",1829054,541036,"47900","Washington-Arlington-Alexandria, DC-VA-MD-WV","metro",6151521,2676308,TRUE
+"816","54","West Virginia",1829054,541036,"34350","Mount Gay-Shamrock, WV","micro",33801,8478,FALSE
+"817","53","Washington",7294336,2730176,"38900","Portland-Vancouver-Hillsboro, OR-WA","metro",2417931,1047457,TRUE
+"818","53","Washington",7294336,2730176,"38820","Port Angeles, WA","micro",74487,17818,FALSE
+"819","53","Washington",7294336,2730176,"47460","Walla Walla, WA","metro",60236,20322,FALSE
+"820","53","Washington",7294336,2730176,"36500","Olympia-Lacey-Tumwater, WA","metro",274684,73630,FALSE
+"821","53","Washington",7294336,2730176,"36830","Othello, WA","micro",19452,4588,FALSE
+"822","53","Washington",7294336,2730176,"34580","Mount Vernon-Anacortes, WA","metro",123907,43053,FALSE
+"823","55","Wisconsin",5778394,2521274,"32860","Menomonie, WI","micro",44498,14475,FALSE
+"824","55","Wisconsin",5778394,2521274,"43020","Shawano, WI","micro",45588,11416,FALSE
+"825","55","Wisconsin",5778394,2521274,"29100","La Crosse-Onalaska, WI-MN","metro",136513,68320,FALSE
+"826","55","Wisconsin",5778394,2521274,"22540","Fond du Lac, WI","metro",102315,43479,FALSE
+"827","55","Wisconsin",5778394,2521274,"44620","Stevens Point, WI","micro",70599,31110,FALSE
+"828","56","Wyoming",581836,198404,"16940","Cheyenne, WY","metro",97692,32827,FALSE
+"829","01","Alabama",4864680,1632958,"42820","Selma, AL","micro",40029,10060,FALSE
+"830","01","Alabama",4864680,1632958,"19300","Daphne-Fairhope-Foley, AL","metro",208107,61792,FALSE
+"831","01","Alabama",4864680,1632958,"45980","Troy, AL","micro",33403,12045,FALSE
+"832","01","Alabama",4864680,1632958,"12120","Atmore, AL","micro",37328,10170,FALSE
+"833","01","Alabama",4864680,1632958,"29300","LaGrange, GA-AL","micro",103600,41123,FALSE
+"834","04","Arizona",6946685,2335934,"46060","Tucson, AZ","metro",1019722,320502,TRUE
+"835","04","Arizona",6946685,2335934,"37740","Payson, AZ","micro",53400,10916,FALSE
+"836","04","Arizona",6946685,2335934,"43420","Sierra Vista-Douglas, AZ","metro",126279,24819,FALSE
+"837","04","Arizona",6946685,2335934,"39150","Prescott Valley-Prescott, AZ","metro",224645,61048,FALSE
+"838","04","Arizona",6946685,2335934,"43320","Show Low, AZ","micro",108705,18800,FALSE
+"839","05","Arkansas",2990671,1008950,"31680","Malvern, AR","micro",33520,5872,FALSE
+"840","05","Arkansas",2990671,1008950,"14180","Blytheville, AR","micro",42831,16174,FALSE
+"841","05","Arkansas",2990671,1008950,"20980","El Dorado, AR","micro",39732,15368,FALSE
+"842","39","Ohio",11641879,4665959,"44220","Springfield, OH","metro",135198,41243,FALSE
+"843","39","Ohio",11641879,4665959,"11740","Ashland, OH","micro",53477,17787,FALSE
+"844","40","Oklahoma",3918137,1316992,"12780","Bartlesville, OK","micro",52001,19482,FALSE
+"845","40","Oklahoma",3918137,1316992,"10220","Ada, OK","micro",38358,12861,FALSE
+"846","41","Oregon",4081943,1576499,"40700","Roseburg, OR","micro",108323,31338,FALSE
+"847","41","Oregon",4081943,1576499,"13460","Bend, OR","metro",180640,68342,FALSE
+"848","41","Oregon",4081943,1576499,"28900","Klamath Falls, OR","micro",66310,17352,FALSE
+"849","41","Oregon",4081943,1576499,"18700","Corvallis, OR","metro",89780,28322,FALSE
+"850","41","Oregon",4081943,1576499,"39260","Prineville, OR","micro",22337,4298,FALSE
+"851","41","Oregon",4081943,1576499,"18300","Coos Bay, OR","micro",63308,18215,FALSE
+"852","41","Oregon",4081943,1576499,"26220","Hood River, OR","micro",23131,10933,FALSE
+"853","42","Pennsylvania",12791181,5335524,"16540","Chambersburg-Waynesboro, PA","metro",153751,50967,FALSE
+"854","42","Pennsylvania",12791181,5335524,"43740","Somerset, PA","micro",74949,19423,FALSE
+"855","42","Pennsylvania",12791181,5335524,"49620","York-Hanover, PA","metro",444014,167130,FALSE
+"856","42","Pennsylvania",12791181,5335524,"42380","Sayre, PA","micro",61304,17974,FALSE
+"857","42","Pennsylvania",12791181,5335524,"26860","Indiana, PA","micro",85755,24606,FALSE
+"858","42","Pennsylvania",12791181,5335524,"35620","New York-Newark-Jersey City, NY-NJ-PA","metro",19318471,8166817,TRUE
+"859","42","Pennsylvania",12791181,5335524,"20180","DuBois, PA","micro",80216,25937,FALSE
+"860","42","Pennsylvania",12791181,5335524,"48700","Williamsport, PA","metro",114859,43915,FALSE
+"861","42","Pennsylvania",12791181,5335524,"47620","Warren, PA","micro",40035,13922,FALSE
+"862","42","Pennsylvania",12791181,5335524,"41260","St. Marys, PA","micro",30608,13947,FALSE
+"863","42","Pennsylvania",12791181,5335524,"49660","Youngstown-Warren-Boardman, OH-PA","metro",545488,192993,FALSE
+"864","45","South Carolina",4955925,1694559,"42860","Seneca, SC","micro",76696,19892,FALSE
+"865","45","South Carolina",4955925,1694559,"13500","Bennettsville, SC","micro",27131,4735,FALSE
+"866","45","South Carolina",4955925,1694559,"23500","Gaffney, SC","micro",56711,18539,FALSE
+"867","45","South Carolina",4955925,1694559,"25940","Hilton Head Island-Bluffton, SC","metro",210558,63557,FALSE
+"868","45","South Carolina",4955925,1694559,"43900","Spartanburg, SC","metro",302195,128430,FALSE
+"869","46","South Dakota",864289,357755,"38180","Pierre, SD","micro",20614,8064,FALSE
+"870","46","South Dakota",864289,357755,"49460","Yankton, SD","micro",22717,11231,FALSE
+"871","46","South Dakota",864289,357755,"26700","Huron, SD","micro",20403,8096,FALSE
+"872","46","South Dakota",864289,357755,"15100","Brookings, SD","micro",34239,14103,FALSE
+"873","47","Tennessee",6651089,2566583,"17420","Cleveland, TN","metro",121339,40497,FALSE
+"874","47","Tennessee",6651089,2566583,"32280","Martin, TN","micro",33626,7897,FALSE
+"875","47","Tennessee",6651089,2566583,"43180","Shelbyville, TN","micro",47558,14581,FALSE
+"876","47","Tennessee",6651089,2566583,"18900","Crossville, TN","micro",58634,14991,FALSE
+"877","48","Texas",27885195,NA,"20900","El Campo, TX","micro",41551,11222,FALSE
+"878","48","Texas",27885195,NA,"43300","Sherman-Denison, TX","metro",128560,39443,FALSE
+"879","48","Texas",27885195,NA,"33420","Mineral Wells, TX","micro",28317,5673,FALSE
+"880","48","Texas",27885195,NA,"14420","Borger, TX","micro",21571,6185,FALSE
+"881","28","Mississippi",2988762,919495,"17260","Clarksdale, MS","micro",23802,5907,FALSE
+"882","28","Mississippi",2988762,919495,"18420","Corinth, MS","micro",37180,12384,FALSE
+"883","29","Missouri",6090062,2463019,"43460","Sikeston, MO","micro",38729,13322,FALSE
+"884","30","Montana",1041732,360257,"33540","Missoula, MT","metro",115983,50107,FALSE
+"885","30","Montana",1041732,360257,"24500","Great Falls, MT","metro",81746,30445,FALSE
+"886","30","Montana",1041732,360257,"14580","Bozeman, MT","micro",104729,47065,FALSE
+"887","34","New Jersey",8881845,3538599,"45940","Trenton-Princeton, NJ","metro",368762,196384,FALSE
+"888","34","New Jersey",8881845,3538599,"12100","Atlantic City-Hammonton, NJ","metro",268539,103653,FALSE
+"889","34","New Jersey",8881845,3538599,"36140","Ocean City, NJ","metro",93705,26890,FALSE
+"890","35","New Mexico",2092434,617213,"31060","Los Alamos, NM","micro",18356,14154,FALSE
+"891","35","New Mexico",2092434,617213,"17580","Clovis, NM","micro",50199,12518,FALSE
+"892","35","New Mexico",2092434,617213,"22140","Farmington, NM","metro",127455,34753,FALSE
+"893","35","New Mexico",2092434,617213,"40740","Roswell, NM","micro",65459,16157,FALSE
+"894","35","New Mexico",2092434,617213,"38780","Portales, NM","micro",19117,3535,FALSE
+"895","36","New York",19618453,8008086,"24100","Gloversville, NY","micro",53743,14448,FALSE
+"896","36","New York",19618453,8008086,"36300","Ogdensburg-Massena, NY","micro",109558,26367,FALSE
+"897","36","New York",19618453,8008086,"28740","Kingston, NY","metro",179303,46244,FALSE
+"898","36","New York",19618453,8008086,"36460","Olean, NY","micro",77686,21775,FALSE
+"899","37","North Carolina",10155624,3689006,"43140","Shelby, NC","micro",97159,30006,FALSE
+"900","37","North Carolina",10155624,3689006,"24780","Greenville, NC","metro",177372,60749,FALSE
+"901","37","North Carolina",10155624,3689006,"35900","North Wilkesboro, NC","micro",68460,19289,FALSE
+"902","37","North Carolina",10155624,3689006,"33980","Morehead City, NC","micro",68920,19540,FALSE
+"903","37","North Carolina",10155624,3689006,"14820","Brevard, NC","micro",33513,7801,FALSE
+"904","37","North Carolina",10155624,3689006,"40460","Rockingham, NC","micro",45189,11038,FALSE
+"905","37","North Carolina",10155624,3689006,"34340","Mount Airy, NC","micro",72099,27896,FALSE
+"906","37","North Carolina",10155624,3689006,"14380","Boone, NC","micro",54117,18141,FALSE
+"907","38","North Dakota",752201,333146,"33500","Minot, ND","micro",77456,27582,FALSE
+"908","39","Ohio",11641879,4665959,"39020","Portsmouth, OH","micro",76377,19323,FALSE
+"909","39","Ohio",11641879,4665959,"41780","Sandusky, OH","micro",75136,30625,FALSE
+"910","39","Ohio",11641879,4665959,"26580","Huntington-Ashland, WV-KY-OH","metro",364446,114510,FALSE
+"911","39","Ohio",11641879,4665959,"35420","New Philadelphia-Dover, OH","micro",92526,29620,FALSE
+"912","39","Ohio",11641879,4665959,"48540","Wheeling, WV-OH","metro",142664,54735,FALSE
+"913","48","Texas",27885195,NA,"43660","Snyder, TX","micro",17239,5733,FALSE
+"914","48","Texas",27885195,NA,"15220","Brownwood, TX","micro",37834,13469,FALSE
+"915","48","Texas",27885195,NA,"13300","Beeville, TX","micro",32691,4768,FALSE
+"916","48","Texas",27885195,NA,"28500","Kerrville, TX","micro",51365,16671,FALSE
+"917","19","Iowa",3132499,1321996,"36820","Oskaloosa, IA","micro",22208,6390,FALSE
+"918","20","Kansas",2908776,1163105,"41460","Salina, KS","micro",60879,28858,FALSE
+"919","20","Kansas",2908776,1163105,"11860","Atchison, KS","micro",16363,5344,FALSE
+"920","20","Kansas",2908776,1163105,"19980","Dodge City, KS","micro",34484,13982,FALSE
+"921","20","Kansas",2908776,1163105,"49060","Winfield, KS","micro",35591,11310,FALSE
+"922","20","Kansas",2908776,1163105,"36840","Ottawa, KS","micro",25563,8316,FALSE
+"923","20","Kansas",2908776,1163105,"24460","Great Bend, KS","micro",26791,10255,FALSE
+"924","21","Kentucky",4440204,1587564,"12680","Bardstown, KY","micro",45388,15096,FALSE
+"925","21","Kentucky",4440204,1587564,"19220","Danville, KY","micro",54371,17376,FALSE
+"926","21","Kentucky",4440204,1587564,"34660","Murray, KY","micro",38776,13942,FALSE
+"927","21","Kentucky",4440204,1587564,"43700","Somerset, KY","micro",64145,21336,FALSE
+"928","21","Kentucky",4440204,1587564,"21780","Evansville, IN-KY","metro",314967,144467,FALSE
+"929","21","Kentucky",4440204,1587564,"16420","Central City, KY","micro",31081,6132,FALSE
+"930","22","Louisiana",4663616,1637381,"26380","Houma-Thibodaux, LA","metro",210801,70218,FALSE
+"931","22","Louisiana",4663616,1637381,"27660","Jennings, LA","micro",31467,6504,FALSE
+"932","22","Louisiana",4663616,1637381,"19760","DeRidder, LA","micro",36769,6717,FALSE
+"933","22","Louisiana",4663616,1637381,"40820","Ruston, LA","micro",47356,15411,FALSE
+"934","22","Louisiana",4663616,1637381,"33380","Minden, LA","micro",39631,10170,FALSE
+"935","22","Louisiana",4663616,1637381,"22860","Fort Polk South, LA","micro",51007,7632,FALSE
+"936","23","Maine",1332813,509789,"12300","Augusta-Waterville, ME","micro",121545,48911,FALSE
+"937","24","Maryland",6003435,2281854,"19060","Cumberland, MD-WV","metro",99255,29972,FALSE
+"938","25","Massachusetts",6830193,3250471,"49340","Worcester, MA-CT","metro",938818,337022,TRUE
+"939","26","Michigan",9957488,3724511,"42300","Sault Ste. Marie, MI","micro",37834,8467,FALSE
+"940","26","Michigan",9957488,3724511,"34740","Muskegon, MI","metro",173043,52096,FALSE
+"941","26","Michigan",9957488,3724511,"15620","Cadillac, MI","micro",48117,14741,FALSE
+"942","26","Michigan",9957488,3724511,"27020","Iron Mountain, MI-WI","micro",29907,13051,FALSE
+"943","26","Michigan",9957488,3724511,"31940","Marinette, WI-MI","micro",63771,20611,FALSE
+"944","26","Michigan",9957488,3724511,"22420","Flint, MI","metro",409361,121169,FALSE
+"945","06","California",39148760,14131235,"32900","Merced, CA","metro",269075,45686,FALSE
+"946","06","California",39148760,14131235,"33700","Modesto, CA","metro",539301,142929,FALSE
+"947","06","California",39148760,14131235,"39780","Red Bluff, CA","micro",63373,12305,FALSE
+"948","06","California",39148760,14131235,"47300","Visalia, CA","metro",460477,96618,FALSE
+"949","06","California",39148760,14131235,"46020","Truckee-Grass Valley, CA","micro",99092,29079,FALSE
+"950","06","California",39148760,14131235,"31460","Madera, CA","metro",155013,26755,FALSE
+"951","06","California",39148760,14131235,"46700","Vallejo, CA","metro",438530,111931,FALSE
+"952","06","California",39148760,14131235,"25260","Hanford-Corcoran, CA","metro",150075,25053,FALSE
+"953","06","California",39148760,14131235,"23420","Fresno, CA","metro",978130,261800,TRUE
+"954","06","California",39148760,14131235,"37100","Oxnard-Thousand Oaks-Ventura, CA","metro",848112,258166,TRUE
+"955","08","Colorado",5531141,2246250,"24540","Greeley, CO","metro",295123,85076,FALSE
+"956","08","Colorado",5531141,2246250,"20420","Durango, CO","micro",55101,22075,FALSE
+"957","08","Colorado",5531141,2246250,"44540","Sterling, CO","micro",21689,5131,FALSE
+"958","08","Colorado",5531141,2246250,"15860","Cañon City, CO","micro",47002,8218,FALSE
+"959","09","Connecticut",3581504,1507555,"45860","Torrington, CT","micro",183031,50591,FALSE
+"960","09","Connecticut",3581504,1507555,"35980","Norwich-New London, CT","metro",268881,105456,FALSE
+"961","09","Connecticut",3581504,1507555,"14860","Bridgeport-Stamford-Norwalk, CT","metro",944348,429679,TRUE
+"962","10","Delaware",949495,391167,"20100","Dover, DE","metro",174822,52481,FALSE
+"963","12","Florida",20598139,7103944,"48100","Wauchula, FL","micro",27228,4202,FALSE
+"964","12","Florida",20598139,7103944,"36380","Okeechobee, FL","micro",40572,7287,FALSE
+"965","12","Florida",20598139,7103944,"39460","Punta Gorda, FL","metro",176954,39311,FALSE
+"966","12","Florida",20598139,7103944,"26140","Homosassa Springs, FL","metro",143087,30047,FALSE
+"967","12","Florida",20598139,7103944,"28580","Key West, FL","micro",76325,32284,FALSE
+"968","13","Georgia",10297484,3703227,"29300","LaGrange, GA-AL","micro",103600,41123,FALSE
+"969","13","Georgia",10297484,3703227,"41220","St. Marys, GA","micro",52714,8585,FALSE
+"970","13","Georgia",10297484,3703227,"15660","Calhoun, GA","micro",56790,19394,FALSE
+"971","13","Georgia",10297484,3703227,"45740","Toccoa, GA","micro",25676,7921,FALSE
+"972","13","Georgia",10297484,3703227,"45580","Thomaston, GA","micro",26216,5538,FALSE
+"973","13","Georgia",10297484,3703227,"27600","Jefferson, GA","micro",65755,23653,FALSE
+"974","16","Idaho",1687809,564949,"30860","Logan, UT-ID","metro",135615,44906,FALSE
+"975","16","Idaho",1687809,564949,"41760","Sandpoint, ID","micro",42711,12111,FALSE
+"976","16","Idaho",1687809,564949,"27220","Jackson, WY-ID","micro",34139,20685,FALSE
+"977","15","Hawaii",1422029,NA,"46520","Urban Honolulu, HI","metro",987638,366570,TRUE
+"978","17","Illinois",12821497,5269763,"19180","Danville, IL","metro",78407,24093,FALSE
+"979","17","Illinois",12821497,5269763,"20820","Effingham, IL","micro",34174,25841,FALSE
+"980","17","Illinois",12821497,5269763,"38700","Pontiac, IL","micro",36324,10945,FALSE
+"981","17","Illinois",12821497,5269763,"16020","Cape Girardeau, MO-IL","metro",97137,39925,FALSE
+"982","17","Illinois",12821497,5269763,"19500","Decatur, IL","metro",106512,44389,FALSE
+"983","17","Illinois",12821497,5269763,"31380","Macomb, IL","micro",30875,8681,FALSE
+"984","17","Illinois",12821497,5269763,"16460","Centralia, IL","micro",38084,11357,FALSE
+"985","18","Indiana",6637426,2683857,"39980","Richmond, IN","micro",66613,24556,FALSE
+"986","18","Indiana",6637426,2683857,"27540","Jasper, IN","micro",54829,30618,FALSE
+"987","18","Indiana",6637426,2683857,"35220","New Castle, IN","micro",48483,11733,FALSE
+"988","18","Indiana",6637426,2683857,"11420","Angola, IN","micro",34474,14771,FALSE
+"989","18","Indiana",6637426,2683857,"37940","Peru, IN","micro",35901,7100,FALSE
+"990","18","Indiana",6637426,2683857,"34620","Muncie, IN","metro",115616,42508,FALSE
+"991","18","Indiana",6637426,2683857,"31500","Madison, IN","micro",32237,11217,FALSE
+"992","18","Indiana",6637426,2683857,"43780","South Bend-Mishawaka, IN-MI","metro",320700,129862,FALSE
+"993","18","Indiana",6637426,2683857,"26540","Huntington, IN","micro",36378,13197,FALSE
+"994","19","Iowa",3132499,1321996,"21840","Fairfield, IA","micro",18077,7101,FALSE
+"995","19","Iowa",3132499,1321996,"44020","Spirit Lake, IA","micro",17056,7412,FALSE
+"996","19","Iowa",3132499,1321996,"26980","Iowa City, IA","metro",169144,70971,FALSE
+"997","19","Iowa",3132499,1321996,"16140","Carroll, IA","micro",20344,10179,FALSE
+"998","19","Iowa",3132499,1321996,"44740","Storm Lake, IA","micro",20260,8707,FALSE
