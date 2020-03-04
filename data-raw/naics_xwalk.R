@@ -1,5 +1,6 @@
 ## code to prepare `naics_xwalk` dataset goes here
 source("R/readxl_online.R")
+library(tidyverse)
 
 # 1997 - 2017 correspondance ==============================================================
 url_naics <- "https://www.census.gov/eos/www/naics/concordances/2017_to_2012_NAICS.xlsx"

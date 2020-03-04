@@ -70,7 +70,12 @@ naics <- naics %>%
 # codebook
 skimr::skim(naics)
 
+naics4_ai <- naics %>%
+  select(naics4_code, naics4_aitype) %>%
+  unique()
+
 # save
 usethis::use_data(naics, overwrite = T)
+usethis::use_data(naics4_ai, overwrite = T)
 
 # dataMaid::makeDataReport(naics,render = F)
