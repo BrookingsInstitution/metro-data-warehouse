@@ -9,7 +9,11 @@ library(dplyr)
 library(stringr)
 
 source("R/readxl_online.R")
-
+metro_type <- read.csv("data-raw/topmetros.csv") %>%
+  transmute(
+    cbsa_code = as.character(cbsa),
+    metrosize = as.character(metrosize)
+  )
 
 # update delinations, population and employment from census ================
 # Require api key from census, sign up here: https://api.census.gov/data/key_signup.html
@@ -104,11 +108,11 @@ def_metro100 <- function(df) {
     unique() %>%
     filter(rank(desc(cbsa_pop)) <= 100))$cbsa_code
 
-  # for metros, change cbsa_type to top100 if applies
   df <- df %>%
-    mutate(cbsa_is.top100 = ifelse(cbsa_code %in% temp,T,F))
+    mutate(cbsa_is.top100 = ifelse(cbsa_code %in% temp, T, F))
   return(df)
 }
+
 
 
 def_countytype <- function(df) {
@@ -161,6 +165,9 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
     cbsa_name = `CBSA Title`,
     cbsa_type
   ) %>%
+  left_join(metro_type, by = "cbsa_code") %>%
+  mutate(cbsa_type = ifelse(is.na(metrosize), cbsa_type, metrosize)) %>%
+  select(-metrosize) %>%
 
   # Create state code and name from counties
   mutate(
@@ -171,13 +178,13 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
   # Construct cbsa and state sum from county population and employment
   group_by(cbsa_code) %>%
   mutate(
-    cbsa_pop = case_when(!is.na(cbsa_code) ~ sum(co_pop)),
-    cbsa_emp = case_when(!is.na(cbsa_code) ~ sum(co_emp))
+    cbsa_pop = case_when(!is.na(cbsa_code) ~ sum(co_pop, na.rm = T)),
+    cbsa_emp = case_when(!is.na(cbsa_code) ~ sum(co_emp, na.rm = T))
   ) %>%
   group_by(st_code) %>%
   mutate(
-    st_pop = sum(co_pop),
-    st_emp = sum(co_emp)
+    st_pop = sum(co_pop, na.rm = T),
+    st_emp = sum(co_emp, na.rm = T)
   ) %>%
   ungroup() %>%
 
@@ -198,12 +205,18 @@ skimr::skim(county_cbsa_st)
 # save output
 usethis::use_data(county_cbsa_st, overwrite = T)
 
-cbsa_st <- county_cbsa_st %>%
-  select(-contains("co_")) %>%
-  filter(!is.na(cbsa_code))%>%
+cbsa <- county_cbsa_st %>%
+  select(-contains("co_"), -contains("st_")) %>%
+  filter(!is.na(cbsa_code)) %>%
   unique()
 
-usethis::use_data(cbsa_st, overwrite = T)
+st <- county_cbsa_st %>%
+  select(contains("st_")) %>%
+  unique()
+
+usethis::use_data(cbsa, overwrite = T)
+usethis::use_data(st, overwrite = T)
 
 write.csv(county_cbsa_st, "data-raw/county_cbsa_st.csv")
-write.csv(cbsa_st, "data-raw/cbsa_st.csv")
+write.csv(cbsa, "data-raw/cbsa.csv")
+write.csv(st, "data-raw/st.csv")
