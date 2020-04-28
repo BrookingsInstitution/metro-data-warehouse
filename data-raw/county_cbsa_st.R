@@ -9,19 +9,19 @@ library(dplyr)
 library(stringr)
 
 source("R/readxl_online.R")
-metro_type <- read.csv("data-raw/topmetros.csv") %>%
-  transmute(
-    cbsa_code = as.character(cbsa),
-    metrosize = as.character(metrosize)
-  )
+# metro_type <- read.csv("data-raw/topmetros.csv") %>%
+#   transmute(
+#     cbsa_code = as.character(cbsa),
+#     metrosize = as.character(metrosize)
+#   )
 
-# update delinations, population and employment from census ================
+# update delineations, population and employment from census ================
 # Require api key from census, sign up here: https://api.census.gov/data/key_signup.html
 key <- Sys.getenv("CENSUS_API_KEY")
 
-# Get latest vintage, last updated at:
-# Wed Apr 24 13:33:37 2019 ------------------------------
-cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2018/delineation-files/list1_Sep_2018.xls"
+# Get latest vintage at:
+# https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
+cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2020/delineation-files/list1_2020.xls"
 urban_url <- "https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls"
 cbp_year <- 2017
 acs_year <- 2018
@@ -113,7 +113,13 @@ def_metro100 <- function(df) {
   return(df)
 }
 
-
+def_metrosize <- function(df){
+  df %>% mutate(cbsa_size = case_when(
+    cbsa_pop > 1000000 ~ "very large",
+    between(cbsa_pop, 500000,1000000) ~ "large",
+    between(cbsa_pop, 250000,500000) ~ "midsized"
+  ))
+}
 
 def_countytype <- function(df) {
   df %>%
@@ -146,12 +152,13 @@ def_countytype <- function(df) {
 # function to construct the master file -----------------
 
 # merge all files
-county_cbsa_st <- get_county.pop(acs_year) %>%
+census_download <- get_county.pop(acs_year) %>%
   left_join(get_county.emp(cbp_year), by = "stco_code") %>%
   left_join(get_msa2county(cbsa_url), by = "stco_code") %>%
-  left_join(get_county_urban_rural(urban_url), by = "stco_code") %>%
+  left_join(get_county_urban_rural(urban_url), by = "stco_code")
 
-  # classify metro types
+# classify metro types
+county_cbsa_st <- census_download %>%
   def_metrotype() %>%
 
   # rename and keep only the selected columns
@@ -165,9 +172,9 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
     cbsa_name = `CBSA Title`,
     cbsa_type
   ) %>%
-  left_join(metro_type, by = "cbsa_code") %>%
-  mutate(cbsa_type = ifelse(is.na(metrosize), cbsa_type, metrosize)) %>%
-  select(-metrosize) %>%
+  # left_join(metro_type, by = "cbsa_code") %>%
+  # mutate(cbsa_type = ifelse(is.na(metrosize), cbsa_type, metrosize)) %>%
+  # select(-metrosize) %>%
 
   # Create state code and name from counties
   mutate(
@@ -191,10 +198,12 @@ county_cbsa_st <- get_county.pop(acs_year) %>%
   # def other classifications
   def_metro100() %>%
   def_countytype() %>%
+  def_metrosize() %>%
 
   # order columns
   select(contains("co_"), contains("st_"), contains("cbsa_"))
 
+skimr::skim(county_cbsa_st)
 
 # generate codebook
 county_cbsa_st <- county_cbsa_st %>%
@@ -209,6 +218,8 @@ cbsa <- county_cbsa_st %>%
   select(-contains("co_"), -contains("st_")) %>%
   filter(!is.na(cbsa_code)) %>%
   unique()
+
+cbsa %>% count(cbsa_type,cbsa_size, cbsa_is.top100)
 
 st <- county_cbsa_st %>%
   select(contains("st_")) %>%
