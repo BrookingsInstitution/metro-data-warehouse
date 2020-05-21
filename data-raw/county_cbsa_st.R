@@ -40,7 +40,8 @@ get_county.pop <- function(acs_year) {
 
     # take out Puerto Rico counties
     filter(state != "72") %>%
-    mutate(stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0")))
+    mutate(stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0"))) %>%
+    select(-state, -county)
 }
 
 # get latest county employment estimates from county business pattern using censusapi::
@@ -63,10 +64,11 @@ get_county.emp <- function(cbp_year) {
       # ),
 
       stco_code = paste0(str_pad(state, 2, "left", "0"), str_pad(county, 3, "left", "0"))
-    )
+    )%>%
+    select(-state, -county)
 }
 
-# download and read xwalk file from: https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
+# download and read county-metro correspondance file
 get_msa2county <- function(url) {
   readxl_online(url, skip = 2) %>%
     mutate(stco_code = paste0(
@@ -75,7 +77,7 @@ get_msa2county <- function(url) {
     ))
 }
 
-# download census urbanized area from: https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html
+# download census urbanized area
 get_county_urban_rural <- function(url) {
   readxl_online(url) %>%
     mutate(
@@ -114,11 +116,14 @@ def_metro100 <- function(df) {
 }
 
 def_metrosize <- function(df){
-  df %>% mutate(cbsa_size = case_when(
-    cbsa_pop > 1000000 ~ "very large",
-    between(cbsa_pop, 500000,1000000) ~ "large",
-    between(cbsa_pop, 250000,500000) ~ "midsized"
-  ))
+  df %>% mutate(cbsa_size = ifelse(cbsa_type == "metro",
+                                   case_when(
+                                     cbsa_pop > 1000000 ~ "very large metros",
+                                     between(cbsa_pop, 500000,1000000) ~ "large metros",
+                                     between(cbsa_pop, 250000,500000) ~ "midsized metros",
+                                     T ~ "small metros"
+                                   ),
+                                   cbsa_type))
 }
 
 def_countytype <- function(df) {
@@ -153,9 +158,11 @@ def_countytype <- function(df) {
 
 # merge all files
 census_download <- get_county.pop(acs_year) %>%
-  left_join(get_county.emp(cbp_year), by = "stco_code") %>%
-  left_join(get_msa2county(cbsa_url), by = "stco_code") %>%
-  left_join(get_county_urban_rural(urban_url), by = "stco_code")
+  full_join(get_county.emp(cbp_year), by = "stco_code") %>%
+  full_join(get_msa2county(cbsa_url), by = "stco_code") %>%
+  full_join(get_county_urban_rural(urban_url), by = "stco_code") %>%
+  filter(stco_code != "NANA") %>%
+  filter(!str_sub(stco_code,1,2) %in% c("60","66","69","78","72"))
 
 # classify metro types
 county_cbsa_st <- census_download %>%
@@ -203,13 +210,9 @@ county_cbsa_st <- census_download %>%
   # order columns
   select(contains("co_"), contains("st_"), contains("cbsa_"))
 
-skimr::skim(county_cbsa_st)
-
 # generate codebook
 county_cbsa_st <- county_cbsa_st %>%
-  mutate_at(c("cbsa_type", "co_type"), as.factor)
-
-skimr::skim(county_cbsa_st)
+  mutate_at(c("cbsa_type", "co_type", "cbsa_size"), as.factor)
 
 # save output
 usethis::use_data(county_cbsa_st, overwrite = T)
