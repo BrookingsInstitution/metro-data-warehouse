@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of metro.data is to streamline data analysis workflow at Brookings Metro
+metro.data is a package that stores commonly used geographic and industry correspondence files and crosswalks. 
 
 ## Installation
 
@@ -16,7 +16,8 @@ library(metro.data)
 
 ## Datasets
 
-### Get relation file of county, cbsa, and state
+### Relationship file of Census county, metro areas, and state
+Source is U.S. Census Bureau's [delineation files](https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html). We use population data from ACS 5-year 2018 survey and employment data from County Business Patterns (2017).
 ``` r
 head(county_cbsa_st)
 
@@ -32,8 +33,8 @@ head(county_cbsa_st)
 6 01119     Sumter~  13084   2991        0    rural ~ 01      Alabama 1.61e6 NA        NA       
 # ... with 4 more variables: cbsa_type <fct>, cbsa_pop <dbl>, cbsa_emp <dbl>, cbsa_size <fct>
 ```
-### Get place to county crosswalk
-
+### Census place to county crosswalk
+Crosswalk is generated using [GEOCORR 2018](http://mcdc.missouri.edu/applications/geocorr2018.html) from Missouri Census Data Center
 ``` r
 head(place2county)
   stpl_fips stco_fips st_fips st_ab             pl_name      co_name  pl_pop16 afact1 afact2
@@ -47,7 +48,7 @@ head(place2county)
 ``` 
 
 ### Get cbsa code of top 100 metros
-
+FIPS code of top 100 metro by population
 ``` r
 cbsa100_code
 
@@ -61,16 +62,4 @@ cbsa100_code
  [92] "21340" "32580" "41620" "36260" "39340" "40060" "42660" "33340" "31540"
 
 ```
-
-
-## Functions
-### Create a plot using Brookings Metro theme
- 
-```r
-bbplot(iris, aes(x = iris$Sepal.Length, y = iris$Sepal.Width))+
-  geom_point()
-```
-
-### Create a metadata file here using an R Shiny app: https://sifan.shinyapps.io/create_metadata/
-
 
