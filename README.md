@@ -63,3 +63,37 @@ cbsa100_code
 
 ```
 
+## Functions
+
+### find the cbsa_code using metro name keywords
+
+```r
+metro.data::find_cbsa_code("portland")
+
+# A tibble: 2 x 2
+  cbsa_code cbsa_name                          
+  <chr>     <chr>                              
+1 38900     Portland-Vancouver-Hillsboro, OR-WA
+2 38860     Portland-South Portland, ME   
+
+```
+
+### find all the counties located in the metros using metro name keywords
+
+```r
+metro.data::find_cbsa_counties("denver") 
+
+# A tibble: 10 x 6
+   stco_code stco_name                    co_pop co_emp co_pcturban co_type       
+   <chr>     <chr>                         <dbl>  <dbl>       <dbl> <fct>         
+ 1 08031     Denver County, Colorado      693417 444646       100   Urban cores   
+ 2 08047     Gilpin County, Colorado        5924   4885         0   Exurbs        
+ 3 08059     Jefferson County, Colorado   570427 198024        93.1 Mature suburbs
+ 4 08001     Adams County, Colorado       497115 173553        96.4 Urban cores   
+ 5 08019     Clear Creek County, Colorado   9379   2961         0   Exurbs        
+ 6 08093     Park County, Colorado         17392   1467         0   Exurbs        
+ 7 08005     Arapahoe County, Colorado    636671 293379        98.4 Urban cores   
+ 8 08014     Broomfield County, Colorado   66120  46084        99.4 Urban cores   
+ 9 08035     Douglas County, Colorado     328614 112808        89.7 Mature suburbs
+10 08039     Elbert County, Colorado       25162   2595         0   Exurbs   
+```
