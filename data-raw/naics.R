@@ -7,6 +7,16 @@ source("R/readxl_online.R")
 # update
 url <- "https://www.census.gov/eos/www/naics/2017NAICS/2-6%20digit_2017_Codes.xlsx"
 
+# naics xwalk 07-12-17 ----
+naics1712 <- metro.data::readxl_online("https://www.census.gov/eos/www/naics/concordances/2017_to_2012_NAICS.xlsx", skip = 2) %>%
+  mutate(naics6_code_17 = as.character(`2017 NAICS Code`),
+         naics6_code_12 = as.character(`2012 NAICS Code`))
+
+naics0712 <- metro.data::readxl_online("https://www.census.gov/eos/www/naics/concordances/2007_to_2012_NAICS.xls", skip = 2) %>%
+  mutate(naics6_code_07 = as.character(`2007 NAICS Code`),
+         naics6_code_12 = as.character(`2012 NAICS Code`))
+
+
 # get naics data ----------------------
 
 get_naics <- function(url) {
@@ -21,10 +31,9 @@ get_naics <- function(url) {
 
 
 # wrangle to wide relation file
-reshape_naics <- function(url) {
-  tmp <- get_naics(url)
+reshape_naics <- function(df) {
 
-  tmp %>%
+  df %>%
     filter(str_length(naics_code) == 6) %>%
     mutate(
       naics5_code = substr(naics_code, 1, 5),
@@ -52,30 +61,28 @@ reshape_naics <- function(url) {
 }
 
 # add advanced industry categories
-advanced_industries <- read.csv("V:/Sifan/R/xwalk/advanced industries.csv") %>%
-  mutate(naics4_code = substr(NAICS, 1, 4)) %>%
-  select(naics4_code, naics4_aitype = Type)
+load("data/naics4_ai.rda")
+naics4_ai <- naics4_ai %>%
+  rename(naics_code = naics4_code)
+
+load("../metro-datasets/R/naics_sc.rda")
+naics_sc <- naics_sc %>%
+  select(naics_code = naics6_code,
+         sector = sector,
+         supply_chain = sc,
+         traded = traded)
 
 # run this ==================================================
-naics <- reshape_naics(url) %>%
-  left_join(advanced_industries, by = "naics4_code")
-
-naics <- naics %>%
-  left_join(naics_xwalk[c("code.naics6.2017","traded.naics6")],by = c("naics6_code" = "code.naics6.2017"))
-
-naics <- naics %>%
-  mutate(naics6_traded = as.factor(traded.naics6),
-         naics4_aitype = as.factor(naics4_aitype))
-
-# codebook
-skimr::skim(naics)
-
-naics4_ai <- naics %>%
-  select(naics4_code, naics4_aitype) %>%
-  unique()
+naics <-  naics %>%
+  # get_naics(url) %>%
+  mutate(naics_level = ifelse(grepl("-",naics_code),2,
+                              str_length(naics_code))) %>%
+  left_join(naics4_ai, by = "naics_code") %>%
+  left_join(naics1712[c("naics6_code_17","naics6_code_12")], by = c("naics_code" = "naics6_code_17")) %>%
+  left_join(naics_sc, by = c("naics6_code_12"="naics_code")) %>%
+  left_join(naics0712[c("naics6_code_07","naics6_code_12")], by =  "naics6_code_12")
 
 # save
 usethis::use_data(naics, overwrite = T)
-usethis::use_data(naics4_ai, overwrite = T)
+# usethis::use_data(naics4_ai, overwrite = T)
 
-# dataMaid::makeDataReport(naics,render = F)
