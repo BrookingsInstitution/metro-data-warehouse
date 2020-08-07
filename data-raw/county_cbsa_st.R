@@ -21,7 +21,8 @@ key <- Sys.getenv("CENSUS_API_KEY")
 
 # Get latest vintage at:
 # https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html
-cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2020/delineation-files/list1_2020.xls"
+# cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2020/delineation-files/list1_2020.xls"
+cbsa_url <- "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2018/delineation-files/list1.xls"
 urban_url <- "https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls"
 cbp_year <- 2017
 acs_year <- 2018
@@ -161,6 +162,7 @@ census_download <- get_county.pop(acs_year) %>%
   full_join(get_county.emp(cbp_year), by = "stco_code") %>%
   full_join(get_msa2county(cbsa_url), by = "stco_code") %>%
   full_join(get_county_urban_rural(urban_url), by = "stco_code") %>%
+  # non-US states
   filter(stco_code != "NANA") %>%
   filter(!str_sub(stco_code,1,2) %in% c("60","66","69","78","72"))
 
@@ -211,26 +213,26 @@ county_cbsa_st <- census_download %>%
   select(contains("co_"), contains("st_"), contains("cbsa_"))
 
 # generate codebook
-county_cbsa_st <- county_cbsa_st %>%
+county_cbsa_st_18 <- county_cbsa_st %>%
   mutate_at(c("cbsa_type", "co_type", "cbsa_size"), as.factor)
 
 # save output
-usethis::use_data(county_cbsa_st, overwrite = T)
+usethis::use_data(county_cbsa_st_18, overwrite = T)
 
-cbsa <- county_cbsa_st %>%
+cbsa_18 <- county_cbsa_st %>%
   select(-contains("co_"), -contains("st_")) %>%
   filter(!is.na(cbsa_code)) %>%
   unique()
 
-cbsa %>% count(cbsa_type,cbsa_size, cbsa_is.top100)
+cbsa_18 %>% count(cbsa_type,cbsa_size, cbsa_is.top100)
 
 st <- county_cbsa_st %>%
   select(contains("st_")) %>%
   unique()
 
-usethis::use_data(cbsa, overwrite = T)
+usethis::use_data(cbsa_18, overwrite = T)
 usethis::use_data(st, overwrite = T)
 
-write.csv(county_cbsa_st, "data-raw/county_cbsa_st.csv")
-write.csv(cbsa, "data-raw/cbsa.csv")
-write.csv(st, "data-raw/st.csv")
+# write.csv(county_cbsa_st, "data-raw/county_cbsa_st.csv")
+# write.csv(cbsa, "data-raw/cbsa.csv")
+# write.csv(st, "data-raw/st.csv")
