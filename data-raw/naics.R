@@ -65,22 +65,23 @@ load("data/naics4_ai.rda")
 naics4_ai <- naics4_ai %>%
   rename(naics_code = naics4_code)
 
-load("../metro-datasets/R/naics_sc.rda")
-naics_sc <- naics_sc %>%
-  select(naics_code = naics6_code,
-         sector = sector,
-         supply_chain = sc,
-         traded = traded)
+# supply chain categories/tradables
+load("data-raw/naics6_sc.rda")
+load("data-raw/naics3_sc.rda")
+naics_sc <- bind_rows(naics3_sc, naics6_sc)
+load("data-raw/naics3_BEST.rda")
 
 # run this ==================================================
 naics <-  naics %>%
-  # get_naics(url) %>%
+  get_naics(url) %>%
   mutate(naics_level = ifelse(grepl("-",naics_code),2,
                               str_length(naics_code))) %>%
   left_join(naics4_ai, by = "naics_code") %>%
   left_join(naics1712[c("naics6_code_17","naics6_code_12")], by = c("naics_code" = "naics6_code_17")) %>%
+  mutate(naics6_code_12 = ifelse(is.na(naics6_code_12),naics_code,naics6_code_12)) %>%
   left_join(naics_sc, by = c("naics6_code_12"="naics_code")) %>%
-  left_join(naics0712[c("naics6_code_07","naics6_code_12")], by =  "naics6_code_12")
+  left_join(naics0712[c("naics6_code_07","naics6_code_12")], by =  "naics6_code_12") %>%
+  mutate(BEST = naics_code %in% naics3_BEST)
 
 # save
 usethis::use_data(naics, overwrite = T)
