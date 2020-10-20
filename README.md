@@ -62,7 +62,49 @@ cbsa100_code
  [92] "21340" "32580" "41620" "36260" "39340" "40060" "42660" "33340" "31540"
 
 ```
+### 6-digit NAICS tradable industries
+```r
+naics %>% 
+  filter(naics_level == 6 & traded == 1) %>% 
+  distinct(naics_code, naics_name)
+  
+# A tibble: 668 x 2
+   naics_code naics_name                                       
+   <chr>      <chr>                                            
+ 1 113110     Timber Tract Operations                          
+ 2 113210     Forest Nurseries and Gathering of Forest Products
+ 3 113310     Logging                                          
+ 4 114111     Finfish Fishing                                  
+ 5 114112     Shellfish Fishing                                
+ 6 114119     Other Marine Fishing                             
+ 7 114210     Hunting and Trapping                             
+ 8 115111     Cotton Ginning                                   
+ 9 115112     Soil Preparation, Planting, and Cultivating      
+10 115113     Crop Harvesting, Primarily by Machine            
+# ... with 658 more rows
+```
+### 4-digit NAICS advanced industries
 
+```r
+naics %>% 
+  filter(naics_level == 4 & !is.na(naics4_aitype)) %>% 
+  distinct(naics_code, naics_name)
+  
+# A tibble: 50 x 2
+   naics_code naics_name                                         
+   <chr>      <chr>                                              
+ 1 2111       Oil and Gas Extraction                             
+ 2 2122       Metal Ore Mining                                   
+ 3 2211       Electric Power Generation, Transmission and Distri~
+ 4 3241       Petroleum and Coal Products Manufacturing          
+ 5 3251       Basic Chemical Manufacturing                       
+ 6 3252       Resin, Synthetic Rubber, and Artificial and Synthe~
+ 7 3253       Pesticide, Fertilizer, and Other Agricultural Chem~
+ 8 3254       Pharmaceutical and Medicine Manufacturing          
+ 9 3259       Other Chemical Product and Preparation Manufacturi~
+10 3271       Clay Product and Refractory Manufacturing          
+# ... with 40 more rows
+```
 ## Functions
 
 ### find the cbsa_code using metro name keywords
