@@ -31,7 +31,12 @@ naics3_sc <- naics_sc %>%
     slice_max(emp))
 
 naics3_sc <- naics3_sc %>%
+  add_row(naics_code = "482",
+          sector = "B2C Traded Services",
+          traded = 1,
+          supply_chain = 0) %>%
   select(naics_code = naics3_code, sector, supply_chain = sc, traded)
+
 save(naics3_sc, file = "data-raw/naics3_sc.rda")
 
 naics6_sc <- naics_sc %>%
