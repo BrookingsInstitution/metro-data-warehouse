@@ -2,6 +2,7 @@ library(tabulizer)
 library(tidyverse)
 library(tidylog)
 
+# download data table from source page
 # "https://www.dropbox.com/s/909kjdhad4z0w0f/AppendixB_SupplyChain_Categorization.pdf?dl=0"
 tmp <- tabulizer::extract_tables("../../../The Brookings Institution/Metro Research - JParilla/COVID recession/library/small biz/AppendixB_SupplyChain_Categorization.pdf")
 
@@ -18,12 +19,16 @@ naics_sc <- purrr::map(tmp[3:20], as.data.frame) %>%
   mutate_at(vars(sc:pct_pce), ~ as.numeric(gsub("%", "", .)))
 
 skimr::skim(naics_sc)
+save(naics_sc, file = "data-raw/naics_sc.rda")
 
 # modifty to 3 digit ---
+load("data-raw/naics_sc.rda")
+
 naics3_sc <- naics_sc %>%
   mutate(naics3_code = str_sub(naics6_code, 1, 3)) %>%
   group_by(naics3_code) %>%
   summarise(across(sc:mfg, ~ weighted.mean(., emp15))) %>%
+
   left_join(naics_sc %>%
     mutate(naics3_code = str_sub(naics6_code, 1, 3)) %>%
     group_by(naics3_code, sector) %>%
@@ -37,11 +42,21 @@ naics3_sc <- naics3_sc %>%
           supply_chain = 0) %>%
   select(naics_code = naics3_code, sector, supply_chain = sc, traded)
 
+# save modified data
 save(naics3_sc, file = "data-raw/naics3_sc.rda")
 
 naics6_sc <- naics_sc %>%
   select(naics_code = naics6_code, sector, supply_chain = sc, traded)
 save(naics6_sc, file = "data-raw/naics6_sc.rda")
+
+
+# alternative definitions
+naics3_sc %>%
+  mutate(sector_alt = case_when(
+    supply_chain > 0.6 ~ "Supply Chain",
+    traded  > 0.6 ~ "B2C Traded Manufacturing and Services",
+    T ~ "Local Mainstreet"
+  ))
 
 # BEST ===============
 
